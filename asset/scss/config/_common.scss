@@ -5,10 +5,13 @@ html {
 }
 
 body{
-    @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
-    @include font-face('Pretendard', 500, 'normal', 'Pretendard-Medium');
-    @include font-face('Pretendard', 400, 'normal', 'Pretendard-Regular');
-    font-family: Pretendard, "맑은고딕", Arial, sans-serif;
+    @include fontFace('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    @include fontFace('Pretendard', 500, 'normal', 'Pretendard-Medium');
+    @include fontFace('Pretendard', 400, 'normal', 'Pretendard-Regular');
+    font-family: 'Pretendard', "맑은고딕", Arial, sans-serif;
 }
 
-
+button {
+    background: none;
+    border:none;
+}

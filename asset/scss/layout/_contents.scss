@@ -1,61 +1,77 @@
 main {
   .inner {
-    width: 1400px;
+    width: calc(100% - 40px);
     margin: 0 auto;
-    padding: 100px 0;
-    @media (min-width: $breakpoint-mobile) and (max-width: 1440px) {
-      width: calc(100% - 40px);
+    padding: 50px 0;
+    @media (min-width: $tablet) {
+      width: 1400px;
+      padding: 100px 0;
+    }
+
+    &.wide {
+      width: 100%;
+    }
+
+    .title {
+      margin-bottom: 50px;
+      .text {
+        @include fontStyle(28px, 33.6px, 700);
+        margin-bottom: 8px;
+      }
+      .desc {
+        @include fontStyle(18px, 25.2px, 400);
+      }
     }
   }
 
   .sector {
     &-visual {
-      height: 800px;
-      padding: 0;
-      @include backgroundImage(100%, 800px, "pc/visual.png");
+      height: 100vh;
+      padding: 0 24px;
+      box-sizing: border-box;
+      p {
+        @include fontStyle(40px, 56px, 700, $white);
+        padding-top: 200px;
+      }
+      @include backgroundImage(100%, 800px, "mo/visual.png");
+      @include tablet {
+        height: 800px;
+        @include backgroundImage(100%, 800px, "pc/visual.png");
+      }
     }
 
     &-tab {
       .tab-list {
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 0 70px 50px;
-
+        padding-left: 20px;
+        overflow: hidden;
         li {
           display: flex;
+          width: 140px !important;
           flex-direction: column;
           align-items: center;
-          width: 19%;
-          height: 196px;
-          box-sizing: border-box;
-          border-bottom: 5px solid transparent;
-
+          margin-right: 14px;
           @for $i from 1 to 5 {
             .tab-icon-0#{$i} {
               display: inline-block;
-              width: 100rem;
-							height: 100rem;
-              background-image: url("/asset/image/pc/tab_icon_0#{$i}.png");
+              width: 60px;
+              height: 60px;
+              background-image: url("/asset/image/common/tab_icon_0#{$i}.png");
               background-size: contain;
               background-position: center;
               background-repeat: no-repeat;
-              @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-                @include cardStyle(60px, 60px);
-                background-image: url("/asset/image/pc/tab_icon_0#{i}.png");
-								
-              }
             }
           }
 
           .tab-name {
             display: inline-block;
-            margin-top: 20px;
-            padding-bottom: 28px;
+            height: 60px;
+            margin-top: 4px;
+            padding-bottom: 12px;
             text-align: center;
-            font-weight: 400;
-            font-size: 2.4rem;
-            @include letterSpacing(24px);
-            line-height: 28.8px;
+            @include fontStyle(18px, 25.2px, 400);
             vertical-align: bottom;
           }
 
@@ -71,53 +87,222 @@ main {
       }
 
       .tab-content {
-				>li {
-					display: none;
+        margin-top: 20px;
+        padding: 0 20px;
+        > .cont {
+          display: none;
+          &.on {
+            display: block;
+          }
 
-					.cont-title {
-						margin-right: 3%;
-						padding: 100px 35px;
-						box-sizing: border-box;
-						color:$white;
-						text-align: center;
-					}
+          .cont-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            @include fontStyle(24px, 28.8px, 700, $white);
+            text-align: center;
+          }
 
-					.tab-content-card {
-						padding: 43.5px 50px;
-						box-sizing: border-box;
+          .tab-content-card {
+            width: 100%;
+            padding: 24px 10px;
+            box-sizing: border-box;
 
-						.card-title {
-							margin-bottom: 20px;
-						}
+            .card-title {
+              @include fontStyle(24px, 28.8px, 700);
+              text-align: center;
+              margin-bottom: 12px;
+            }
 
-						ul.card-content {
-							padding: 30px;
-							border-radius: 16px;
-							background-color: rgba(255, 255, 255, 0.6);
-							min-height: 323px;
-							box-sizing: border-box;
+            ul.card-content {
+              padding: 16px 8px;
+              border-radius: 16px;
+              background-color: rgba(255, 255, 255, 0.6);
+              min-height: 400px;
+              box-sizing: border-box;
 
-							li {
-								line-height: 28.8px;
-								margin-bottom: 10px;
-								&:before {
-									content: '';
-									display: inline-block;
-									margin: 0 12px;
-									width: 4px;
-									height: 4px;
-									background-color: $basic;
-									border-radius: 50%;
-									vertical-align: middle;
-								}
-							}
-						}
-					}
+              li {
+                position: relative;
+                padding-left: 28px;
+                @include fontStyle(16px, 22.4px, 400);
+                margin-bottom: 10px;
+                &:before {
+                  content: "";
+                  display: inline-block;
+                  position: absolute;
+                  top: 10px;
+                  left: 12px;
+                  width: 4px;
+                  height: 4px;
+                  background-color: $basic;
+                  border-radius: 50%;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+      }
 
-					&.on {
-						display: flex;
-					}
-				}
+      @include tablet {
+        .tab-list {
+          padding: 0 70px 50px;
+        }
+
+        li {
+          width: 19%;
+          height: 196px;
+          box-sizing: border-box;
+          border-bottom: 5px solid transparent;
+
+          .tab-name {
+            margin-top: 20px;
+            padding-bottom: 28px;
+            text-align: center;
+            vertical-align: bottom;
+          }
+        }
+        .tab-content {
+          > .cont {
+            display: none;
+
+            .cont-title {
+              margin-right: 3%;
+              padding: 100px 35px;
+            }
+
+            .tab-content-card {
+              padding: 43.5px 50px;
+              box-sizing: border-box;
+
+              .card-title {
+                margin-bottom: 20px;
+              }
+
+              ul.card-content {
+                padding: 30px;
+                border-radius: 16px;
+                background-color: rgba(255, 255, 255, 0.6);
+                min-height: 323px;
+                box-sizing: border-box;
+
+                li {
+                  line-height: 28.8px;
+                  margin-bottom: 10px;
+                  &:before {
+                    content: "";
+                    display: inline-block;
+                    margin: 0 12px;
+                    width: 4px;
+                    height: 4px;
+                    background-color: $basic;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+
+            // &.on {
+            //   display: flex;
+            // }
+          }
+        }
+      }
+    }
+
+    &-history {
+      .cont-box {
+        dt {
+          position: relative;
+          padding-left: 21px;
+          @include fontStyle(28px, 33.6px, 700);
+          &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: -17px;
+            @include backgroundImage(34px, 34px, "icon/round.svg");
+          }
+        }
+
+        dd {
+          padding: 16px 0 24px 21px;
+          border-left: 1px solid $basic;
+
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            @include fontStyle(16px, 22.4px, 400);
+
+            .month-flag {
+              margin-right: 8px;
+              padding: 4px 8px;
+              box-sizing: border-box;
+              height: 25px;
+              border-radius: 8px;
+              border: 1px solid #9a9a9a;
+              @include fontStyle(12px, 16.8px, 400, #9a9a9a);
+            }
+          }
+          .sub-title {
+            display: inline-block;
+            margin-bottom: 8px;
+            @include fontStyle(16px, 22.4px, 400);
+          }
+        }
+      }
+    }
+
+    &-service {
+      background-color: #f1faff;
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+      .service-list {
+        li {
+          width: 100%;
+          @for $i from 1 to 3 {
+            &.service-card-0#{$i} {
+              @include cardStyle(100%, 560px);
+              height: auto;
+              padding: 44.5px 20px;
+              background-image: url("/asset/image/mo/service_0#{$i}.png");
+              background-size: cover;
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              @include tablet {
+                @include cardStyle(100%, 465px);
+                background-image: url("/asset/image/pc/service_0#{$i}.png");
+              }
+            }
+          }
+        }
+        .slick-dots {
+          display: flex;
+          justify-content: center;
+          bottom: -32px;
+          li {
+            display: inline-block;
+            width: 12px;
+          height: 12px;
+          margin-left: 20px;
+          border-radius: 50%;
+          border:1px solid $basic;
+          &:last-child {
+            margin-right: 0;
+          }
+          &.slick-active {
+            background-color: $basic;
+          }
+          }
+        }
       }
     }
   }
