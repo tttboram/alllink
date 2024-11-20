@@ -1,0 +1,91 @@
+@import "./_vars.scss";
+
+// 디바이스 정의
+//모바일
+@mixin mobile {
+    @media (min-width: #{$breakpoint-mobile}) and (max-width : #{$breakpoint-tablet  - 1px}){
+        @content;
+    }
+}
+//pc
+@mixin pc {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width : #{$breakpoint-pc  - 1px}){
+        @content;
+    }
+}
+
+//주요 스타일 믹스인
+//font-face
+@mixin font-face($font-family, $font-weight, $font-style, $font-name) {
+    @font-face {
+      font-family: #{$font-family};
+      font-weight: #{$font-weight};
+      font-style: #{$font-style};
+  
+      src:
+           url('/asset/font/#{$font-name}.woff') format("woff"),
+           url('/asset/font/#{$font-name}.ttf') format("truetype"),
+           
+    }
+  }
+  
+  
+@mixin font-style ($size,$lineheight, $weight) {
+    font-size: $size;
+    line-height: $lineheight;
+    letter-spacing: $size * 0.02;
+    font-weight: $weight;
+}
+
+//letter-spacing
+  @mixin letterSpacing($fontSize) {
+    letter-spacing: calc($fontSize * -0.02);
+  }
+
+// 배경이미지
+@mixin backgroundImage($width, $height,$file){
+    width: $width;
+    height: $height;
+    background-image: url('/asset/image/#{$file}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+// 컴포넌트 관련 믹스인
+//문의하기,보내기 버튼
+@mixin buttonStyle($backgroundColor) {
+    width: 135px;
+    height: 57px;
+    background-color:$backgroundColor;
+    color:$white;
+    box-sizing: border-box;
+    background-repeat: 8px;
+    padding: 16px 36px;
+    line-height: 25.2px;
+}
+
+//인풋창
+@mixin inputStyle($width,$bordercolor) {
+    width: $width;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid $bordercolor;
+    padding: 12px 13px 12px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    @include letterSpacing(14px);
+    line-height: 19.6px;
+    color: #333;
+}
+
+
+//카드
+@mixin cardStyle($width, $height){
+    width:$width;
+    height:$height;
+    border-radius: 40px;
+}
+
+

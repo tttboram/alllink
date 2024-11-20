@@ -1,0 +1,7 @@
+.inner{
+    width: 1400px;
+    margin: 0 auto;
+    @media (min-width:$breakpoint-mobile) and (max-width : 1440px) {
+        width: calc(100% - 40px)
+    }
+}

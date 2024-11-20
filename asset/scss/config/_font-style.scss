@@ -1,0 +1,155 @@
+@import url('/asset/scss/config/_font-face.scss');
+@import url('/asset/scss/utils/_mixin.scss');
+
+
+
+// 헤드라인
+
+    .hl-1{
+      @include font-style (48px, 22.5px,700);
+        @media (min-width:$breakpoint-mobile) and (max-width : $breakpoint-tablet) {
+            font-size: 24px;
+            @include letterSpacing(24px);
+        }
+
+    }
+    .hl-2{
+      @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+        font-size: 40px;
+        @include letterSpacing(40px);
+        @media (min-width:$breakpoint-mobile) and (max-width : $breakpoint-tablet) {
+            font-size: 20px;
+            @include letterSpacing(20px);
+        }
+    }
+    
+    .hl-3{
+      @include font-style (32px, 22.5px,700);
+        @media (min-width:$breakpoint-mobile) and (max-width : $breakpoint-tablet) {
+            font-size: 18px;
+            @include letterSpacing(18px);
+        }
+    }
+
+
+
+
+// 타이틀
+.title-1 {
+  @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    font-size: 28px;
+    @include letterSpacing(28px);
+}
+
+.title-2 {
+  @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    font-size: 24px;
+    @include letterSpacing(24px);
+}
+
+.title-2 {
+  @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+
+    font-size: 22px;
+    @include letterSpacing(22px);
+}
+
+
+// 본문 bold
+.body-lb {
+    @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    font-size: 18px;
+    @include letterSpacing(18px);
+}
+
+.body-mb {
+    @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    font-size: 16px;
+    @include letterSpacing(16px);
+}
+.body-sb {
+    @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    font-size: 14px;
+    @include letterSpacing(14px);
+}
+
+//본문 medium
+.body-lm {
+    @include font-face('Pretendard', 500, 'normal', 'Pretendard-Medium');
+    font-size: 18px;
+    
+}
+
+.body-mm {
+    @include font-face('Pretendard', 500, 'normal', 'Pretendard-Medium');
+    font-size: 16px;
+}
+
+.body-sm {
+    @include font-face('Pretendard', 500, 'normal', 'Pretendard-Medium');
+    font-size: 14px;
+}
+
+//본문 regular
+.body-lr {
+    @include font-face('Pretendard', 400, 'normal', 'Pretendard-Regular');
+    font-size: 18px;
+}
+
+.body-lm {
+    @include font-face('Pretendard', 400, 'normal', 'Pretendard-Regular');
+    font-size: 16px;
+}
+
+.body-sr {
+    @include font-face('Pretendard', 400, 'normal', 'Pretendard-Regular');
+    font-size: 14px;
+}
+
+
+// caption bold
+.caption-lb {
+    @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    font-size: 13px;
+}
+
+.caption-mb {
+    @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    font-size: 12px;
+}
+.caption-sb {
+    @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    font-size: 11px;
+}
+
+//caption medium
+.caption-lm {
+    @include font-face('Pretendard', 500, 'normal', 'Pretendard-Medium');
+    font-size: 13px;
+}
+
+.caption-mm {
+    @include font-face('Pretendard', 500, 'normal', 'Pretendard-Medium');
+    font-size: 12px;
+}
+
+.caption-sm {
+    @include font-face('Pretendard', 500, 'normal', 'Pretendard-Medium');
+    font-size: 11px;
+}
+
+//caption regular
+.body-lr {
+    @include font-face('Pretendard', 400, 'normal', 'Pretendard-Regular');
+    font-size: 13px;
+}
+
+.body-lm {
+    @include font-face('Pretendard', 400, 'normal', 'Pretendard-Regular');
+    font-size: 12px;
+}
+
+.body-sr {
+    @include font-face('Pretendard', 400, 'normal', 'Pretendard-Regular');
+    font-size: 11px;
+}

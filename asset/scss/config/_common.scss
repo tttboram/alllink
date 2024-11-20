@@ -1,0 +1,14 @@
+@import url("/asset/scss/utils/_mixin.scss");
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body{
+    @include font-face('Pretendard', 700, 'normal', 'Pretendard-Bold');
+    @include font-face('Pretendard', 500, 'normal', 'Pretendard-Medium');
+    @include font-face('Pretendard', 400, 'normal', 'Pretendard-Regular');
+    font-family: Pretendard, "맑은고딕", Arial, sans-serif;
+}
+
+
