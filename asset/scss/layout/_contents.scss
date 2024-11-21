@@ -1,16 +1,6 @@
 main {
   .inner {
-    width: calc(100% - 40px);
-    margin: 0 auto;
     padding: 50px 0;
-    @media (min-width: $tablet) {
-      width: 1400px;
-      padding: 100px 0;
-    }
-
-    &.wide {
-      width: 100%;
-    }
 
     .title {
       margin-bottom: 50px;
@@ -25,21 +15,37 @@ main {
   }
 
   .sector {
+    //.sector-visual
     &-visual {
       height: 100vh;
       padding: 0 24px;
       box-sizing: border-box;
+      @include backgroundImage(100%, 800px, "mo/visual.png");
       p {
         @include fontStyle(40px, 56px, 700, $white);
         padding-top: 200px;
       }
-      @include backgroundImage(100%, 800px, "mo/visual.png");
       @include tablet {
+        position: relative;
         height: 800px;
         @include backgroundImage(100%, 800px, "pc/visual.png");
+       .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        br {
+          display: none;
+          &.only-pc {
+            display: block;
+          }
+        }
+       }
       }
     }
 
+    //.sector-tab
     &-tab {
       .tab-list {
         width: 100%;
@@ -74,7 +80,7 @@ main {
             @include fontStyle(18px, 25.2px, 400);
             vertical-align: bottom;
           }
-
+          //.tab-list li.on
           &.on {
             border-bottom: 5px solid $primary;
 
@@ -91,6 +97,7 @@ main {
         padding: 0 20px;
         > .cont {
           display: none;
+          //.cont.on
           &.on {
             display: block;
           }
@@ -213,6 +220,7 @@ main {
       }
     }
 
+    //.sector-history
     &-history {
       .cont-box {
         dt {
@@ -258,6 +266,7 @@ main {
       }
     }
 
+    //.sector-service
     &-service {
       background-color: #f1faff;
 
@@ -265,25 +274,56 @@ main {
         margin-bottom: 20px;
       }
 
-      .service-list {
-        li {
+      .service-slide {
+        .service-card {
           width: 100%;
-          @for $i from 1 to 3 {
-            &.service-card-0#{$i} {
-              @include cardStyle(100%, 560px);
-              height: auto;
-              padding: 44.5px 20px;
-              background-image: url("/asset/image/mo/service_0#{$i}.png");
-              background-size: cover;
-              background-position: 50% 50%;
-              background-repeat: no-repeat;
-              @include tablet {
-                @include cardStyle(100%, 465px);
-                background-image: url("/asset/image/pc/service_0#{$i}.png");
+          height: auto;
+          padding: 44.5px 20px;
+          box-sizing: border-box;
+          min-height: 560px;
+          text-align: center;
+          color: $white;
+
+          &.service-card-02 {
+            padding-top: 100px;
+          }
+
+          .card-cont {
+            margin: 0 auto;
+            max-width: 295px;
+            margin-bottom: 12px;
+            .sub-title {
+              @include fontStyle(16px, 22.4px, 700, $white);
+              margin-bottom: 8px;
+            }
+            .cont-list {
+              li {
+                position: relative;
+                display: inline-block;
+                @include fontStyle(16px, 19.2px, 400, $white);
+                margin-bottom: 8px;
+                padding-left: 20px;
+                &:before {
+                  content: "";
+                  display: inline-block;
+                  position: absolute;
+                  top: 0;
+                  left: 0px;
+                  margin-right: 4px;
+                  @include backgroundImage(16px, 19px, "icon/check.svg");
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+              &:last-child {
+                margin-bottom: 0;
               }
             }
           }
         }
+
         .slick-dots {
           display: flex;
           justify-content: center;
@@ -291,18 +331,104 @@ main {
           li {
             display: inline-block;
             width: 12px;
-          height: 12px;
-          margin-left: 20px;
-          border-radius: 50%;
-          border:1px solid $basic;
-          &:last-child {
-            margin-right: 0;
-          }
-          &.slick-active {
-            background-color: $basic;
-          }
+            height: 12px;
+            margin-right: 20px;
+            border-radius: 50%;
+            border: 1px solid $basic;
+            //.slick-dots:last-child
+            &:last-child {
+              margin-right: 0;
+            }
+            //.slick-dots.slick-active
+            &.slick-active {
+              background-color: $basic;
+            }
           }
         }
+      }
+    }
+
+    //.sector-contact
+    &-contact {
+      .map-box {
+        border-radius: 40px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .cont-box {
+        .cont-title {
+          @include fontStyle(22px, 26.4px, 700);
+          margin-bottom: 16px;
+        }
+
+        .contact-list {
+          .contact {
+            //.contact-item
+            &-item {
+              @include fontStyle(18px, 25.2px, 400);
+              margin-bottom: 12px;
+              display: flex;
+              align-items: center;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              @for $i from 1 to 4 {
+                &.item-0#{$i} {
+                  &:before {
+                    content: "";
+                    display: inline-block;
+                    background-image: url("/asset/image/icon/contact_0#{$i}.svg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 36px;
+                    height: 36px;
+                    margin-right: 20px;
+                  }
+                }
+              }
+            }
+            &-item {
+              @include fontStyle(18px, 25.2px, 400);
+              margin-bottom: 12px;
+              display: flex;
+              align-items: center;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              @for $i from 1 to 4 {
+                &.item-0#{$i} {
+                  &:before {
+                    content: "";
+                    display: inline-block;
+                    background-image: url("/asset/image/icon/contact_0#{$i}.svg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 36px;
+                    height: 36px;
+                    margin-right: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //.sector-message
+    &-message {
+      background-color: #ecf3f8;
+      padding: 24px 20px;
+      text-align: center;
+      .text {
+        @include fontStyle(22px, 26.4px, 700);
+        margin-bottom: 20px;
+      }
+      .inquery-button {
+        display: inline-block;
       }
     }
   }

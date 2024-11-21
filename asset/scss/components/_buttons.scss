@@ -3,6 +3,7 @@
 
 .inquery-button {
     @include buttonStyle($primary);
+    display: inline-block;
     &:hover{
         @include buttonStyle(#24AFF7);
     }

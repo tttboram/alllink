@@ -6,49 +6,94 @@ header {
   right: 0;
   bottom: 0;
   height: 80px;
-  z-index: 100 !important;
+  z-index: 50 !important;
   @include tablet {
-    height: 100px;  
+    height: 100px;
     position: fixed;
- 
   }
-  // 슬라이드 메뉴 열렸을 때
+
+  //피씨 스크롤 작동했을 때
+  &.scroll {
+    background-color: #DADADA;
+    
+    .inner{
+      .logo {
+        @include backgroundImage(
+          151px,
+          60px,
+          "common/logo_scroll.png",
+          contain
+        );
+      }
+      .nav-box {
+        .nav-bar {
+          li {
+            a{
+             color:$basic;
+            }
+           }
+        }
+        .language-selector {
+          .language-btn {
+            border-color:$basic;
+            span {
+              color:$basic;
+            }
+          }
+          &.active {
+            ul{
+              &.language-dropdown {
+                border-color: $basic;
+                background-color: $white;
+                li {
+                  a {
+                    color: $basic;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // 모바일 슬라이드 메뉴 열렸을 때
   &.slide-on {
     background-color: $white;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
-   .inner {
-    .logo {
-      @include backgroundImage(120px, 60px, "common/logo_scroll.png",contain);
-      
+    .inner {
+      .logo {
+        @include backgroundImage(
+          120px,
+          60px,
+          "common/logo_scroll.png",
+          contain
+        );
+      }
+      .nav-btn {
+        @include backgroundImage(36px, 36px, "icon/close.svg");
+      }
     }
-    .nav-btn {
-      @include backgroundImage(36px, 36px, "icon/close.svg");
-    }
-   }
   }
-
 
   .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(100% - 40px);
     padding: 10px 0;
     box-sizing: border-box;
 
     @include tablet {
-      width: calc(100% - 100px);
+      width: calc(100% - 20px);
       padding: 20px 10px;
-      margin: 0 auto;
     }
 
     .logo {
-      @include backgroundImage(120px, 60px, "common/logo.png",contain);
+      @include backgroundImage(120px, 60px, "common/logo.png", contain);
       @include tablet {
         @include backgroundImage(151px, 60px, "common/logo.png");
       }
     }
-
 
     // 모바일 사이드메뉴
     .nav-btn {
@@ -57,8 +102,6 @@ header {
         display: none;
       }
     }
-
-
 
     // pc 네비게이션 메뉴
     .nav-box {
@@ -74,9 +117,9 @@ header {
             margin-right: 30px;
             text-align: center;
             line-height: 25.2px;
-
+            @include fontStyle(18px, 25.2px, 400, $white);
             a {
-              width: 100%;
+              @include fontStyle(18px, 25.2px, 400, $white);
               color: $white;
               &:active,
               &:hover {
@@ -85,73 +128,76 @@ header {
             }
           }
         }
-      
       }
     }
 
-    .language-selector {
-      position: relative;
-      width: 113px;
-      height: 41px;
-      button {
-        
-        padding: 8px 16px;
-        box-sizing: border-box;
-        background: transparent;
-        border: 1px solid $white;
-        border-radius: 8px;
-
-        span {
-          display: inline-block;
+    @include tablet {
+      .language-selector {
+        position: relative;
+        width: 113px;
+        height: 41px;
+        .language-btn {
           width: 100%;
-          color: $white;
-          text-align: left;
-          &:after {
-            content: "";
+          height: 100%;
+          padding: 8px 16px;
+          box-sizing: border-box;
+          background: transparent;
+          border: 1px solid $white;
+          border-radius: 8px;
+          @include fontStyle (18px, 25.2px, 400,$white);
+          span {
             display: inline-block;
-            position: absolute;
-            top: 8px;
-            right: 16px;
-            @include backgroundImage(24px, 24px, "pc/chevron-down.svg");
-          }
-        }
-      }
-      ul.language-dropdown {
-        display: none;
-        position: absolute;
-        top: 41px;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-        border: 1px solid $white;
-        border-radius: 8px;
-        color: $white;
-        overflow: hidden;
-        li {
-          width: 100%;
-          height: 41px;
-
-          a {
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            padding: 8px 16px;
-            box-sizing: border-box;
-            line-height: 25.2px;
+            width: 100%;    
+            color: $white;
             text-align: left;
-            &:hover {
-              color: $basic;
-              background-color: $white;
-            }
-            &:active {
-              color: $primary;
+            &:after {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              top: 8px;
+              right: 16px;
+              @include backgroundImage(24px, 24px, "pc/chevron-down.svg");
             }
           }
         }
-      }
-      &.active {
         ul.language-dropdown {
-          display: block;
+          display: none;
+          position: absolute;
+          top: 41px;
+          left: 0;
+          width: 100%;
+          box-sizing: border-box;
+          border: 1px solid $white;
+          border-radius: 8px;
+          color: $white;
+          overflow: hidden;
+          li {
+            width: 100%;
+            height: 41px;
+
+            a {
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              padding: 8px 16px;
+              box-sizing: border-box;
+              line-height: 25.2px;
+              text-align: left;
+              @include fontStyle (18px, 25.2px, 400,$white);
+              &:hover {
+                color: $basic;
+                background-color: $basic;
+              }
+              &:active {
+                color: $primary;
+              }
+            }
+          }
+        }
+        &.active {
+          ul.language-dropdown {
+            display: block;
+          }
         }
       }
     }
@@ -169,7 +215,7 @@ header {
   height: 100vh;
   padding: 30px 20px;
   background-color: $white;
-  
+
   &.slide-on {
     display: block;
   }
@@ -177,14 +223,14 @@ header {
     padding-bottom: 20px;
 
     .menu {
-      @include fontStyle (18px, 25.2px, 400);
+      @include fontStyle(18px, 25.2px, 400);
       padding: 20px 0;
-      border-bottom:1px solid #dadada;
+      border-bottom: 1px solid #dadada;
     }
   }
   .language-selector {
     position: relative;
-   
+
     button {
       padding: 8.5px 16px;
       box-sizing: border-box;
@@ -197,7 +243,7 @@ header {
         position: relative;
         display: inline-block;
         width: 100%;
-        @include fontStyle(18px,25.2px,700);
+        @include fontStyle(18px, 25.2px, 700);
         text-align: left;
         &:after {
           content: "";

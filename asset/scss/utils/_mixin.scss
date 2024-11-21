@@ -5,104 +5,101 @@
 //@include 브레이크포인트 믹스인명 { 스타일정의 };
 
 @mixin tablet {
-    @media (min-width: #{$tablet}) {
-      @content;
-    }
+  @media (min-width: #{$tablet}) {
+    @content;
   }
-   
-  @mixin laptop {
-    @media (min-width: #{$laptop}) {
-      @content;
-    }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
   }
-   
-   
-  @mixin desktop {
-    @media (min-width: #{$desktop}) {
-      @content;
-    }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
   }
+}
 
 //주요 스타일 믹스인
 //font-face 설정
 @mixin fontFace($font-family, $font-weight, $font-style, $font-name) {
-    @font-face {
-      font-family: #{$font-family};
-      font-weight: #{$font-weight};
-      font-style: #{$font-style};
-  
-      src:
-           url('/asset/font/#{$font-name}.woff') format("woff"),
-           url('/asset/font/#{$font-name}.ttf') format("truetype"),
-           
-    }
+  @font-face {
+    font-family: #{$font-family};
+    font-weight: #{$font-weight};
+    font-style: #{$font-style};
+
+    src: url("/asset/font/#{$font-name}.woff") format("woff"),
+      url("/asset/font/#{$font-name}.ttf") format("truetype");
   }
-  
+}
 
 //공통 폰트 스타일을 설정하는 대신 아래의 믹스인으로 폰트스타일을 작성한다
 //@include fontStyle(폰트사이즈, lineheight 값, font-weight 값) { 스타일 정의 };
-@mixin fontStyle ($size,$lineheight, $weight, $color:#333) {
-    font-size: $size;
-    line-height: $lineheight;
-    letter-spacing: $size * -0.02;
-    font-weight: $weight;
-    color: $color;
+@mixin fontStyle($size, $lineheight, $weight, $color: #333) {
+  font-size: $size;
+  line-height: $lineheight;
+  letter-spacing: $size * -0.02;
+  font-weight: $weight;
+  color: $color;
 }
 
 //letter-spacing
-  @mixin letterSpacing($fontSize) {
-    letter-spacing: calc($fontSize * -0.02);
-  }
+@mixin letterSpacing($fontSize) {
+  letter-spacing: calc($fontSize * -0.02);
+}
 
 // 배경이미지
 //@include backgroundImage(넓이, 높이, image폴더 이후에 파일 경로 ,배경이미지사이즈-기본 cover)  { 스타일 정의 };
-@mixin backgroundImage($width, $height,$file ,$bgsize: cover){
-    width: $width;
-    height: $height;
-    background-image: url('/asset/image/#{$file}');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: $bgsize;
+@mixin backgroundImage($width, $height, $file, $bgsize: cover) {
+  width: $width;
+  height: $height;
+  background-image: url("/asset/image/#{$file}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $bgsize;
 }
-
 
 // 컴포넌트 관련 믹스인
 //문의하기,보내기 버튼
 //버튼이 배경컬러만 변경 되는 스타일
 //@include buttonStyle( 배경컬러 ){ 스타일 정의 };
 @mixin buttonStyle($backgroundColor) {
+  display: inline-block;
+  width: 119px;
+  height: 57px;
+  padding: 16px 0;
+  background-color: $backgroundColor;
+  box-sizing: border-box;
+  border-radius: 8px;
+  @include fontStyle(18px,25.2px,700,$white );
+  @include tablet {
     width: 135px;
     height: 57px;
-    background-color:$backgroundColor;
-    color:$white;
-    box-sizing: border-box;
-    background-repeat: 8px;
-    padding: 16px 36px;
-    line-height: 25.2px;
+  }
 }
 
 //인풋창
 //@include inputStyle (넓이, 보더라인 컬러) { 스타일 정의 };
-@mixin inputStyle($width,$bordercolor) {
-    width: $width;
-    height: 44px;
-    box-sizing: border-box;
-    border: 1px solid $bordercolor;
-    padding: 12px 13px 12px 12px;
-    font-weight: 500;
-    font-size: 14px;
-    @include letterSpacing(14px);
-    line-height: 19.6px;
-    color: #333;
+@mixin inputStyle($width, $bordercolor) {
+  width: $width;
+  height: 43px;
+  box-sizing: border-box;
+  border: 1px solid $bordercolor;
+  padding: 12px 13px 12px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  @include letterSpacing(14px);
+  line-height: 19.6px;
+  color: #333;
 }
-
 
 //카드
 //@include cardStyle (넓이, 높이) { 스타일 정의 };
-@mixin cardStyle($width, $height){
-    width:$width;
-    min-height:$height;
-    border-radius: 20px;
+@mixin cardStyle($width, $height) {
+  width: $width;
+  min-height: $height;
+  border-radius: 20px;
 }
-
-

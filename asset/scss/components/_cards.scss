@@ -23,16 +23,17 @@
   }
 }
 
-@for $i from 1 to 2 {
+@for $i from 1 to 3 {
   .service-card-0#{$i} {
     @include cardStyle(100%, 560px);
-    background-image: url("/asset/image/mo/service_0#{i}.png");
+    height: auto;
+    background-image: url("/asset/image/mo/service_0#{$i}.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     @include tablet {
       @include cardStyle(100%, 465px);
-      background-image: url("/asset/image/pc/service_0#{i}.png");
+      background-image: url("/asset/image/pc/service_0#{$i}.png");
     }
   }
 }

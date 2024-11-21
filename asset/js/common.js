@@ -5,6 +5,9 @@ $(function () {
     initSlick();
     headerScroll();
     slickEvent();
+    MapShow();
+    popupEvent();
+    popupClose();
 });
 
 //다국어 드롭다운
@@ -98,4 +101,48 @@ function slickEvent() {
         dots:true,
         arrows:false,
     });
+}
+
+function MapShow() {
+  var mapContainer = $('#map')[0], // 지도를 표시할 div
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.505624, 127.024373), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition = new kakao.maps.LatLng(37.505624, 127.024373);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 지도 위의 마커를 제거하려면 아래 코드를 사용하세요
+    // marker.setMap(null);
+}
+
+function popupEvent() {
+  $('.popup-btn').on('click',function(){
+    $('.popup').css({
+      "top" :(($(window).height()-$('.popup').outerHeight())/2 + $(window).scrollTop())+"px",
+      "left" :(($(window).width()-$('.popup').outerWidth())/2 + $(window).scrollLeft())+"px",
+    });
+    $('.popup').css('display','block');
+    $('.dimmed').css('display','block');
+  });
+
+};
+
+
+function popupClose() {
+  $('.popup .close-btn').on('click',function(){
+    $('.popup').css('display','none');
+    $('.dimmed').css('display','none');
+  })
 }
