@@ -1205,17 +1205,12 @@ main .sector-tab .tab-content > .cont .tab-content-card ul.card-content li:befor
 }
 @media (min-width: 768px) {
   main .sector-history .cont-box {
-    width: 47.6%;
-    box-sizing: border-box;
+    width: 47%;
     padding-top: 100px;
     margin: 0 auto;
   }
 }
-main .sector-history .cont-box dl {
-  position: relative;
-  display: flex;
-}
-main .sector-history .cont-box dl dt {
+main .sector-history .cont-box dt {
   position: relative;
   padding-left: 21px;
   font-size: 28px;
@@ -1224,7 +1219,7 @@ main .sector-history .cont-box dl dt {
   font-weight: 700;
   color: #333;
 }
-main .sector-history .cont-box dl dt:before {
+main .sector-history .cont-box dt:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1237,43 +1232,11 @@ main .sector-history .cont-box dl dt:before {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (min-width: 768px) {
-  main .sector-history .cont-box dl dt:before {
-    display: none;
-    padding-left: 0;
-  }
-}
-@media (min-width: 768px) {
-  main .sector-history .cont-box dl dt {
-    width: 192px;
-    padding-right: 42px;
-    box-sizing: border-box;
-  }
-}
-main .sector-history .cont-box dl dd {
-  position: relative;
+main .sector-history .cont-box dd {
   padding: 16px 0 24px 21px;
   border-left: 1px solid #333;
 }
-@media (min-width: 768px) {
-  main .sector-history .cont-box dl dd {
-    padding: 0 0 50px 80px;
-  }
-  main .sector-history .cont-box dl dd:before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: -17px;
-    width: 34px;
-    height: 34px;
-    background-image: url("/asset/image/icon/round.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-main .sector-history .cont-box dl dd li {
+main .sector-history .cont-box dd li {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
@@ -1283,7 +1246,7 @@ main .sector-history .cont-box dl dd li {
   font-weight: 400;
   color: #333;
 }
-main .sector-history .cont-box dl dd li .month-flag {
+main .sector-history .cont-box dd li .month-flag {
   margin-right: 8px;
   padding: 4px 8px;
   box-sizing: border-box;
@@ -1296,7 +1259,7 @@ main .sector-history .cont-box dl dd li .month-flag {
   font-weight: 400;
   color: #9a9a9a;
 }
-main .sector-history .cont-box dl dd .sub-title {
+main .sector-history .cont-box dd .sub-title {
   display: inline-block;
   margin-bottom: 8px;
   font-size: 16px;
@@ -1304,9 +1267,6 @@ main .sector-history .cont-box dl dd .sub-title {
   letter-spacing: -0.32px;
   font-weight: 400;
   color: #333;
-}
-main .sector-history .cont-box dl:last-child dd {
-  border-left: none;
 }
 main .sector-service {
   background-color: #f1faff;

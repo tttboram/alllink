@@ -9,8 +9,8 @@
     background-position: center;
     background-repeat: no-repeat;
     @include tablet {
-      @include cardStyle(22.86%, 468px);
-      background-image: url("/asset/image/pc/tab_0#{i}.png");
+      @include cardStyle(30%, 468px);
+      background-image: url("/asset/image/pc/tab_0#{$i}.png");
     }
   }
 }

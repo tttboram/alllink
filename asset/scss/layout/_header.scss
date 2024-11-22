@@ -38,13 +38,18 @@ header {
             border-color:$basic;
             span {
               color:$basic;
+              &:after {
+                @include backgroundImage(24px, 24px, "icon/chevron_down.svg");
+              }
             }
           }
           &.active {
             ul{
               &.language-dropdown {
+       
                 border-color: $basic;
                 background-color: $white;
+                
                 li {
                   a {
                     color: $basic;
@@ -251,7 +256,7 @@ header {
           position: absolute;
           top: 0;
           right: 0;
-          @include backgroundImage(24px, 24px, "icon/chevron-down.svg");
+          @include backgroundImage(24px, 24px, "icon/chevron_down.svg");
         }
       }
     }
@@ -260,12 +265,13 @@ header {
       position: absolute;
       top: 41px;
       left: 0;
-      width: 100%;
+      width: 113px;
       box-sizing: border-box;
-      border: 1px solid $white;
+      border: 1px solid #9a9a9a;
       border-radius: 8px;
-      color: $white;
+      color: $basic;
       overflow: hidden;
+      z-index: 60;
       li {
         width: 100%;
         height: 41px;
@@ -276,11 +282,11 @@ header {
           height: 100%;
           padding: 8px 16px;
           box-sizing: border-box;
-          line-height: 25.2px;
+          @include fontStyle(18px,25.2px,400);
           text-align: left;
           &:hover {
             color: $basic;
-            background-color: $white;
+            background-color: #F1FAFF;
           }
           &:active {
             color: $primary;

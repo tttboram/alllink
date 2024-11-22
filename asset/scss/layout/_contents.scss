@@ -7,10 +7,49 @@ main {
       .text {
         @include fontStyle(28px, 33.6px, 700);
         margin-bottom: 8px;
+        @include tablet {
+          @include fontStyle(40px, 56px, 700);
+          margin-bottom: 24px;
+        }
       }
       .desc {
         @include fontStyle(18px, 25.2px, 400);
+        @include tablet {
+          @include fontStyle(24px, 28.8px, 400);
+        }
       }
+    }
+    @include tablet {
+      padding: 100px 0;
+    }
+  }
+
+  br{
+    @include tablet {
+      display: none;
+      &.only-pc, &.common {
+        display: block !important;
+      }
+    }
+  }
+
+  .top-button {
+    display: inline-block;
+    position: fixed;
+    bottom: 25px;
+    right: 16px;
+    width: 43px;
+    height: 43px;
+    z-index: 20;
+    a {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      @include backgroundImage(43px, 43px,'/common/top_btn.png')
+    }
+
+    @include tablet {
+      display: none !important;
     }
   }
 
@@ -35,12 +74,6 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 0;
-        br {
-          display: none;
-          &.only-pc {
-            display: block;
-          }
-        }
        }
       }
     }
@@ -154,38 +187,53 @@ main {
       }
 
       @include tablet {
-        .tab-list {
-          padding: 0 70px 50px;
-        }
-
-        li {
-          width: 19%;
-          height: 196px;
-          box-sizing: border-box;
-          border-bottom: 5px solid transparent;
-
-          .tab-name {
-            margin-top: 20px;
-            padding-bottom: 28px;
-            text-align: center;
-            vertical-align: bottom;
+        .inner.wide{
+          @include tablet {
+            width: 1400px;
+            margin: 0 auto;
           }
         }
+  
+        .tab-list {
+          padding: 0 70px 50px;
+          box-sizing: border-box;
+          li {
+            width: 19% !important;
+            box-sizing: border-box;
+            border-bottom: 5px solid transparent;
+  
+            .tab-name {
+              margin-top: 24px;
+              margin-bottom: 12px;
+              @include fontStyle (24px, 28.8px, 400);
+              text-align: center;
+              vertical-align: bottom;
+            }
+          }
+        }
+
+
         .tab-content {
           > .cont {
             display: none;
 
             .cont-title {
+              display: block;
               margin-right: 3%;
               padding: 100px 35px;
+              border-radius: 40px;
+              @include fontStyle (32px, 38.4px,700,$white);
             }
 
             .tab-content-card {
               padding: 43.5px 50px;
+              border-radius: 40px;
               box-sizing: border-box;
-
+              
               .card-title {
                 margin-bottom: 20px;
+                @include fontStyle (32px, 38.4px,700);
+                text-align: left;
               }
 
               ul.card-content {
@@ -196,25 +244,15 @@ main {
                 box-sizing: border-box;
 
                 li {
-                  line-height: 28.8px;
+                  @include fontStyle(18px, 28.8px, 400);
                   margin-bottom: 10px;
-                  &:before {
-                    content: "";
-                    display: inline-block;
-                    margin: 0 12px;
-                    width: 4px;
-                    height: 4px;
-                    background-color: $basic;
-                    border-radius: 50%;
-                    vertical-align: middle;
-                  }
                 }
               }
             }
 
-            // &.on {
-            //   display: flex;
-            // }
+            &.on {
+              display: flex;
+            }
           }
         }
       }
@@ -223,45 +261,85 @@ main {
     //.sector-history
     &-history {
       .cont-box {
-        dt {
-          position: relative;
-          padding-left: 21px;
-          @include fontStyle(28px, 33.6px, 700);
-          &:before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            left: -17px;
-            @include backgroundImage(34px, 34px, "icon/round.svg");
-          }
+        @include tablet {
+          
+          width: 47.6%;
+          box-sizing: border-box;
+          padding-top: 100px;
+          margin: 0 auto;
         }
-
-        dd {
-          padding: 16px 0 24px 21px;
-          border-left: 1px solid $basic;
-
-          li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            @include fontStyle(16px, 22.4px, 400);
-
-            .month-flag {
-              margin-right: 8px;
-              padding: 4px 8px;
+        dl {
+          position: relative;
+          display: flex;
+          dt {
+            position: relative;
+            padding-left: 21px;
+            @include fontStyle(28px, 33.6px, 700);
+            &:before {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              left: -17px;
+              @include backgroundImage(34px, 34px, "icon/round.svg");
+              @include tablet {
+                display: none;
+                padding-left: 0;
+              }
+            }
+            @include tablet {
+              width: 192px;
+              padding-right: 42px;
               box-sizing: border-box;
-              height: 25px;
-              border-radius: 8px;
-              border: 1px solid #9a9a9a;
-              @include fontStyle(12px, 16.8px, 400, #9a9a9a);
             }
           }
-          .sub-title {
-            display: inline-block;
-            margin-bottom: 8px;
-            @include fontStyle(16px, 22.4px, 400);
+  
+          dd {
+            position: relative;
+            padding: 16px 0 24px 21px;
+            border-left: 1px solid $basic;
+  
+            @include tablet {
+              padding: 0 0 50px 80px;
+              &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: -17px;
+                @include backgroundImage(34px, 34px, "icon/round.svg");
+              }
+             
+            }
+  
+            li {
+              display: flex;
+              align-items: center;
+              margin-bottom: 8px;
+              @include fontStyle(16px, 22.4px, 400);
+  
+              .month-flag {
+                margin-right: 8px;
+                padding: 4px 8px;
+                box-sizing: border-box;
+                height: 25px;
+                border-radius: 8px;
+                border: 1px solid #9a9a9a;
+                @include fontStyle(12px, 16.8px, 400, #9a9a9a);
+              }
+            }
+            .sub-title {
+              display: inline-block;
+              margin-bottom: 8px;
+              @include fontStyle(16px, 22.4px, 400);
+            }
           }
+
+          &:last-child {
+            dd {
+              border-left:  none;
+            }
+        }
         }
       }
     }
@@ -297,9 +375,14 @@ main {
               margin-bottom: 8px;
             }
             .cont-list {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
               li {
                 position: relative;
-                display: inline-block;
+                display: block;
+                width: fit-content;
                 @include fontStyle(16px, 19.2px, 400, $white);
                 margin-bottom: 8px;
                 padding-left: 20px;
