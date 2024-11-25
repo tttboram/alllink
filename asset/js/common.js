@@ -11,6 +11,7 @@ $(function () {
   popupClose();
   moveToTop();
   topbtnFade();
+  moveToContent();
 });
 
 //다국어 드롭다운
@@ -52,19 +53,26 @@ function slideMenu() {
       $('header').removeClass('slide-on');
       $('.nav-btn').removeClass('slide-on');
       $('.side-menu').removeClass('slide-on');
-      $('body').css('overflow', 'auto');
-      $('body').css('overflow', 'auto');
+      $('html').css('overflow', 'auto');
     } else {
       $('header').addClass('slide-on');
       $('.nav-btn').addClass('slide-on');
       $('.side-menu').addClass('slide-on');
-      $('body').css('overflow', 'hidden');
+      $('html').css('overflow', 'hidden');
 
-    }
+    };
+  })
+};
+
+function moveToContent() {
+  var move_btn = $('.side-menu .menu a');
+  move_btn.on('click',function(){
+    $('.side-menu').removeClass('slide-on');
+    $('header').removeClass('slide-on');
   })
 }
 function initSlick() {
-  if (window.innerWidth <= 768) {  // 모바일 화면 (768px 이하)
+  if (window.innerWidth <= 560) {  // 슬라이드 총 길이 이하
     // 이미 초기화된 Slick이 있으면 다시 초기화하지 않음
     if (!$('.tab-list').hasClass('slick-initialized')) {
       $('.tab-list').slick({

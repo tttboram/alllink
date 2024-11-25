@@ -18,11 +18,16 @@
   left: 0;
   width: 100%;
   background-color: $white;
-
+  @include tablet {
+    width: 60% ;
+  }
   .inner {
     width: 100%;
     padding: 50px 16px;
     box-sizing: border-box;
+    @include tablet {
+      padding: 100px 80px;
+    }
 
     .cont-box {
       .close-btn {

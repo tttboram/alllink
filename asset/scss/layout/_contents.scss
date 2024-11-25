@@ -101,6 +101,13 @@ main {
           margin: 0 auto;
         }
       }
+
+      @include desktop {
+        .inner.wide {
+          width: 1400px;
+        }
+      }
+
       .tab-list {
         width: 100%;
         display: flex;
@@ -290,11 +297,15 @@ main {
         @include tablet {
           width: calc(100% - 40px);
         }
+        @include desktop {
+          width: 1400px;
+        }
       }
 
       .cont-box {
         @include tablet {
-          width: 100%;
+          width: 73%;
+          margin: 0 auto;
         }
 
         @include laptop {
@@ -417,8 +428,7 @@ main {
             }
           }
         }
-
-        @include laptop {
+        @media (min-width: 769px) {
           .tab-item {
             @include fontStyle(20px, 33.6px, 400, #7f7f7f);
             &.on {
@@ -431,7 +441,7 @@ main {
       .service-slide {
         .service-card {
           width: 100%;
-          height: auto;
+          height: 560px;
           padding: 44.5px 20px;
           box-sizing: border-box;
           text-align: center;
@@ -440,7 +450,9 @@ main {
           @include tablet {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             padding: 30px 50px;
+            height: auto;
             aspect-ratio: 10/4;
           }
 
@@ -657,7 +669,7 @@ main {
       .text {
         @include fontStyle(22px, 26.4px, 700);
         margin-bottom: 20px;
-        
+
         @include tablet {
           margin-bottom: 0;
           @include fontStyle(28px, 33.6px, 700);
