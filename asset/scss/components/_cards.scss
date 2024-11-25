@@ -25,7 +25,7 @@
 
 @for $i from 1 to 3 {
   .service-card-0#{$i} {
-    @include cardStyle(100%, 560px);
+    @include cardStyle(100%, auto);
     height: auto;
     background-image: url("/asset/image/mo/service_0#{$i}.png");
     background-size: cover;

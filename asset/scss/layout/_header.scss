@@ -30,9 +30,14 @@ header {
           li {
             a{
              color:$basic;
+             &:active, 
+             &:hover {
+              font-weight: 700;
+              color:$basic;
+             }
             }
            }
-        }
+          }
         .language-selector {
           .language-btn {
             border-color:$basic;
@@ -131,6 +136,13 @@ header {
                 color: $primary;
               }
             }
+            @include tablet {
+              margin-right: 0;
+              &:last-child {
+                margin-right: 30px;
+              }
+            }
+
           }
         }
       }

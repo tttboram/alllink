@@ -23,10 +23,10 @@
         <!-- tablet~PC -->
         <div class="nav-box">
           <ul class="nav-bar body-lr">
-            <li class="menu"><a href="">About</a></li>
-            <li class="menu"><a href="">History</a></li>
-            <li class="menu"><a href="">Service</a></li>
-            <li class="menu"><a href="">Contact Us</a></li>
+            <li class="menu"><a href="#about">About</a></li>
+            <li class="menu"><a href="#history">History</a></li>
+            <li class="menu"><a href="#service">Service</a></li>
+            <li class="menu"><a href="#contact">Contact Us</a></li>
           </ul>
           <div class="language-selector body-lr">
             <button class="language-btn">
@@ -86,7 +86,7 @@
         </p>
       </section>
 
-      <section class="sector-tab">
+      <section class="sector-tab" id="about">
         <div class="inner wide">
           <ul class="tab-list">
             <li class="tab on">
@@ -187,7 +187,7 @@
         </div>
       </section>
 
-      <section class="sector-history">
+      <section class="sector-history" id="history">
         <div class="inner">
           <div class="title">
             <p class="text">연혁</p>
@@ -349,15 +349,16 @@
         </div>
       </section>
 
-      <section class="sector-service">
+      <section class="sector-service" id="service">
         <div class="inner">
           <div class="title">
             <p class="text">4U-Pay 서비스</p>
             <span class="desc">4U-Pay 서비스를 소개합니다.</span>
           </div>
           <ul class="service-tab">
-            <li class="tab-item"></li>
-            <li class="tab-item"></li>
+            <li class="tab-item on">안전한 결제/지급, 다양한 RM</li>
+            <li class="tab-item">해외 직구구매,구매대행,배송대행<br class="only-pc"/>
+              결제 서비스 4U-Pay</li>
           </ul>
           <ul class="service-slide">
             <li class="service-card service-card-01">
@@ -377,7 +378,7 @@
                 <div class="sub-title">다양한 RM</div>
                 <ul class="cont-list">
                   <li>
-                    소비자가 결제서비스를 이용함에 있어 불편함을 최소화해주고,
+                    소비자가 결제서비스를 이용함에 있어 불편함을 최소화해주고,<br class="only-pc"/>
                     자체 Risk Management Solution을 활용한 고객 만족 시스템을
                     제공
                   </li>
@@ -398,13 +399,13 @@
         </div>
       </section>
 
-      <section class="sector-contact">
+      <section class="sector-contact" id="contact">
         <div class="inner">
           <div class="title">
             <p class="text">Contact Us</p>
           </div>
           <div class="map-box">
-            <div id="map" style="width: 100%; height: 350px"></div>
+            <div id="map" style="width: 100%; height: 100%"></div>
           </div>
           <div class="cont-box">
             <p class="cont-title">주식회사 포유소프트</p>
@@ -418,8 +419,10 @@
           </div>
         </div>
         <div class="sector-message">
-          <p class="text">문의가 필요하면<br />저희에게 연락해 주세요!</p>
+          <div class="inner">
+            <p class="text">문의가 필요하면 <br class="only-mo"/>저희에게 연락해 주세요!</p>
           <button class="inquery-button popup-btn">문의하기</button>
+          </div>
         </div>
       </section>
     </main>

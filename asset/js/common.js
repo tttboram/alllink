@@ -5,6 +5,7 @@ $(function () {
   initSlick();
   headerScroll();
   slickEvent();
+  serviceTab();
   MapShow();
   popupEvent();
   popupClose();
@@ -42,7 +43,7 @@ function tabEvent() {
     console.log(idx)
     tabBox.removeClass('on');
     $('.tab-content .cont:eq(' + idx + ')').addClass('on');
-  })
+  });
 }
 
 function slideMenu() {
@@ -89,9 +90,8 @@ $(window).on('resize', initSlick);
 
 function headerScroll() {
   if (window.innerWidth > 768) {
-    var headerHeight = $('header').height();
     $(window).on('scroll', function () {
-      if (window.scrollY > headerHeight) {
+      if (window.scrollY > 80) {
         $('header').addClass('scroll');
       } else {
         $('header').removeClass('scroll');
@@ -103,11 +103,26 @@ function headerScroll() {
 }
 
 function slickEvent() {
+  $('.service-tab').slick({
+    slidesToshow:2,
+    infinite:false,
+    variableWidth: true,
+    focusOnSelect: true,
+    asNavFor:'.service-slide'
+  });
   $('.service-slide').slick({
     dots: true,
     arrows: false,
+    asNavFor:'.service-tab'
   });
 }
+
+function serviceTab(){
+  $('.service-tab li').on('click',function(){
+    $('.service-tab li').removeClass('on');
+    $(this).addClass('on');
+  });
+};
 
 function MapShow() {
   var mapContainer = $('#map')[0], // 지도를 표시할 div
