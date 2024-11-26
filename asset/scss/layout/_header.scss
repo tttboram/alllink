@@ -6,6 +6,7 @@ header {
   right: 0;
   bottom: 0;
   height: 80px;
+  box-sizing: border-box;
   z-index: 50 !important;
   @include tablet {
     height: 100px;
@@ -52,13 +53,19 @@ header {
           &.active {
             ul{
               &.language-dropdown {
-       
                 border-color: $basic;
                 background-color: $white;
                 
                 li {
                   a {
                     color: $basic;
+                    &:hover {
+                      background-color: #f1faff;
+                      color:$basic;
+                    }
+                  }
+                  &.clicked {
+                    color:#0189d0;
                   }
                 }
               }
@@ -206,10 +213,16 @@ header {
               @include fontStyle (18px, 25.2px, 400,$white);
               &:hover {
                 color: $basic;
-                background-color: $basic;
+                background-color: #F1FAFF;
               }
               &:active {
                 color: $primary;
+              }
+            }
+            &.clicked {
+              a {
+                color:#0189d0;
+                background-color: $white;
               }
             }
           }
@@ -229,7 +242,7 @@ header {
   visibility: hidden;
   z-index: 1;
   position: fixed;
-  top: 80px;
+  top: 75px;
   left: 0;
   width: 100%;
   transform: translateX(-100%);

@@ -10,6 +10,7 @@ body {
   @include fontFace("Pretendard", 500, "normal", "Pretendard-Medium");
   @include fontFace("Pretendard", 400, "normal", "Pretendard-Regular");
   font-family: "Pretendard", "맑은고딕", Arial, sans-serif;
+  overflow: hidden;
 }
 
 .inner {

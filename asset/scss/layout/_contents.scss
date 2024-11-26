@@ -114,6 +114,7 @@ main {
         justify-content: space-between;
         padding-left: 20px;
         overflow: hidden;
+  
 
         li {
           display: flex;
@@ -121,6 +122,8 @@ main {
           flex-direction: column;
           align-items: center;
           margin-right: 14px;
+          box-sizing: border-box;
+
           @for $i from 1 to 5 {
             .tab-icon-0#{$i} {
               display: inline-block;
@@ -145,12 +148,13 @@ main {
             margin-top: 4px;
             padding-bottom: 12px;
             text-align: center;
-            @include fontStyle(18px, 25.2px, 400);
+            
+            @include fontStyle(17px, 25.2px, 400);
             vertical-align: bottom;
 
             @include tablet {
               margin-bottom: 8px;
-              @include fontStyle(18px, 25.2px, 400);
+              @include fontStyle(17px, 25.2px, 400);
               height: 40px;
             }
 
@@ -158,8 +162,6 @@ main {
               margin-top: 24px;
               margin-bottom: 12px;
               @include fontStyle(24px, 28.8px, 400);
-              text-align: center;
-              vertical-align: bottom;
             }
           }
           //.tab-list li.on
@@ -200,13 +202,17 @@ main {
               display: block;
               margin-right: 3%;
               margin-bottom: 0;
-              padding: 100px 35px;
+              padding: 100px 0;
               border-radius: 40px;
-              @include fontStyle(24px, 28.8px, 700, $white);
+              @include fontStyle(22px, 28.8px, 700, $white);
             }
 
             @include laptop {
               @include fontStyle(32px, 38.4px, 700, $white);
+            }
+
+            @include desktop {
+              padding: 100px 35px;
             }
           }
 
@@ -303,9 +309,24 @@ main {
       }
 
       .cont-box {
+        position: relative;
+        margin-left: 17px;
+        padding-top: 80px;
+
+      &:before {
+        content:'';
+        position: absolute;
+        top: 0;
+        left: -3px;
+        display: inline-block;
+        @include backgroundImage (5px, 100%, 'icon/arrow.svg');
+      }
         @include tablet {
           width: 73%;
           margin: 0 auto;
+          &:before {
+            left: 189px;
+          }
         }
 
         @include laptop {
@@ -333,6 +354,7 @@ main {
               top: 0;
               left: -17px;
               @include backgroundImage(34px, 34px, "icon/round.svg");
+              background-color: $white;
               @include tablet {
                 display: none;
                 padding-left: 0;
@@ -348,7 +370,6 @@ main {
           dd {
             position: relative;
             padding: 16px 0 24px 21px;
-            border-left: 1px solid $basic;
 
             @include tablet {
               padding: 0 0 50px 80px;
@@ -422,13 +443,14 @@ main {
             box-sizing: border-box;
             padding: 0 18px;
             text-align: center;
-            @include fontStyle(28px, 33.6px, 400, #7f7f7f);
+            @include fontStyle(20px, 33.6px, 400, #7f7f7f);
             &.on {
-              @include fontStyle(28px, 33.6px, 700, #0189d0);
+              @include fontStyle(20px, 33.6px, 700, #0189d0);
             }
           }
         }
-        @media (min-width: 769px) {
+        
+        @include desktop {
           .tab-item {
             @include fontStyle(20px, 33.6px, 400, #7f7f7f);
             &.on {
@@ -436,6 +458,8 @@ main {
             }
           }
         }
+        
+        
       }
 
       .service-slide {
@@ -535,6 +559,10 @@ main {
                 text-align: left;
                 margin-bottom: 27px;
               }
+            }
+
+            &:last-child {
+              margin-bottom: 0;
             }
           }
         }

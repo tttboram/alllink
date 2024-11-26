@@ -162,6 +162,7 @@ html {
 body {
   position: relative;
   font-family: "Pretendard", "맑은고딕", Arial, sans-serif;
+  overflow: hidden;
 }
 @font-face {
   font-family: Pretendard;
@@ -562,6 +563,7 @@ header {
   right: 0;
   bottom: 0;
   height: 80px;
+  box-sizing: border-box;
   z-index: 50 !important;
 }
 @media (min-width: 768px) {
@@ -608,6 +610,13 @@ header.scroll .inner .nav-box .language-selector.active ul.language-dropdown {
 }
 header.scroll .inner .nav-box .language-selector.active ul.language-dropdown li a {
   color: #333;
+}
+header.scroll .inner .nav-box .language-selector.active ul.language-dropdown li a:hover {
+  background-color: #f1faff;
+  color: #333;
+}
+header.scroll .inner .nav-box .language-selector.active ul.language-dropdown li.clicked {
+  color: #0189d0;
 }
 header.slide-on {
   background-color: #fff;
@@ -787,10 +796,14 @@ header .inner .nav-box {
   }
   header .inner .language-selector ul.language-dropdown li a:hover {
     color: #333;
-    background-color: #333;
+    background-color: #F1FAFF;
   }
   header .inner .language-selector ul.language-dropdown li a:active {
     color: #0089D0;
+  }
+  header .inner .language-selector ul.language-dropdown li.clicked a {
+    color: #0189d0;
+    background-color: #fff;
   }
   header .inner .language-selector.active ul.language-dropdown {
     display: block;
@@ -801,7 +814,7 @@ header .inner .nav-box {
   visibility: hidden;
   z-index: 1;
   position: fixed;
-  top: 80px;
+  top: 75px;
   left: 0;
   width: 100%;
   transform: translateX(-100%);
@@ -1055,6 +1068,7 @@ main .sector-tab .tab-list li {
   flex-direction: column;
   align-items: center;
   margin-right: 14px;
+  box-sizing: border-box;
 }
 main .sector-tab .tab-list li .tab-icon-01 {
   display: inline-block;
@@ -1105,9 +1119,9 @@ main .sector-tab .tab-list li .tab-name {
   margin-top: 4px;
   padding-bottom: 12px;
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 25.2px;
-  letter-spacing: -0.36px;
+  letter-spacing: -0.34px;
   font-weight: 400;
   color: #333;
   vertical-align: bottom;
@@ -1115,9 +1129,9 @@ main .sector-tab .tab-list li .tab-name {
 @media (min-width: 768px) {
   main .sector-tab .tab-list li .tab-name {
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 25.2px;
-    letter-spacing: -0.36px;
+    letter-spacing: -0.34px;
     font-weight: 400;
     color: #333;
     height: 40px;
@@ -1132,8 +1146,6 @@ main .sector-tab .tab-list li .tab-name {
     letter-spacing: -0.48px;
     font-weight: 400;
     color: #333;
-    text-align: center;
-    vertical-align: bottom;
   }
 }
 main .sector-tab .tab-list li.on {
@@ -1176,11 +1188,11 @@ main .sector-tab .tab-content > .cont .cont-title {
     display: block;
     margin-right: 3%;
     margin-bottom: 0;
-    padding: 100px 35px;
+    padding: 100px 0;
     border-radius: 40px;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28.8px;
-    letter-spacing: -0.48px;
+    letter-spacing: -0.44px;
     font-weight: 700;
     color: #fff;
   }
@@ -1192,6 +1204,11 @@ main .sector-tab .tab-content > .cont .cont-title {
     letter-spacing: -0.64px;
     font-weight: 700;
     color: #fff;
+  }
+}
+@media (min-width: 1400px) {
+  main .sector-tab .tab-content > .cont .cont-title {
+    padding: 100px 35px;
   }
 }
 main .sector-tab .tab-content > .cont .tab-content-card {
@@ -1302,10 +1319,31 @@ main .sector-tab .tab-content > .cont .tab-content-card ul.card-content li:befor
     width: 1400px;
   }
 }
+main .sector-history .cont-box {
+  position: relative;
+  margin-left: 17px;
+  padding-top: 80px;
+}
+main .sector-history .cont-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3px;
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  background-image: url("/asset/image/icon/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media (min-width: 768px) {
   main .sector-history .cont-box {
     width: 73%;
     margin: 0 auto;
+  }
+  main .sector-history .cont-box:before {
+    left: 189px;
   }
 }
 @media (min-width: 1020px) {
@@ -1345,6 +1383,7 @@ main .sector-history .cont-box dl dt:before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   main .sector-history .cont-box dl dt:before {
@@ -1362,7 +1401,6 @@ main .sector-history .cont-box dl dt:before {
 main .sector-history .cont-box dl dd {
   position: relative;
   padding: 16px 0 24px 21px;
-  border-left: 1px solid #333;
 }
 @media (min-width: 768px) {
   main .sector-history .cont-box dl dd {
@@ -1443,21 +1481,21 @@ main .sector-service .service-tab {
     box-sizing: border-box;
     padding: 0 18px;
     text-align: center;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 33.6px;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.4px;
     font-weight: 400;
     color: #7f7f7f;
   }
   main .sector-service .service-tab .tab-item.on {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 33.6px;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.4px;
     font-weight: 700;
     color: #0189d0;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 1400px) {
   main .sector-service .service-tab .tab-item {
     font-size: 20px;
     line-height: 33.6px;
@@ -1597,6 +1635,9 @@ main .sector-service .service-slide .service-card .card-cont .cont-list:last-chi
     text-align: left;
     margin-bottom: 27px;
   }
+}
+main .sector-service .service-slide .service-card .card-cont:last-child {
+  margin-bottom: 0;
 }
 main .sector-service .service-slide .slick-dots {
   display: flex;
