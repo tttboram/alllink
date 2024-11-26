@@ -969,6 +969,9 @@ main .inner .title .desc {
   main br.only-pc, main br.common {
     display: block !important;
   }
+  main br.only-laptop {
+    display: block !important;
+  }
 }
 main .top-button {
   display: inline-block;
@@ -1204,6 +1207,9 @@ main .sector-tab .tab-content > .cont .cont-title {
     letter-spacing: -0.64px;
     font-weight: 700;
     color: #fff;
+  }
+  main .sector-tab .tab-content > .cont .cont-title br {
+    display: block !important;
   }
 }
 @media (min-width: 1400px) {

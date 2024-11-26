@@ -34,6 +34,9 @@ main {
       &.common {
         display: block !important;
       }
+      &.only-laptop {
+        display: block !important;
+      }
     }
   }
 
@@ -209,6 +212,9 @@ main {
 
             @include laptop {
               @include fontStyle(32px, 38.4px, 700, $white);
+              br {
+                display: block !important;
+              }
             }
 
             @include desktop {
