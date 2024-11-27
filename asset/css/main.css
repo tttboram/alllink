@@ -157,6 +157,7 @@ a {
 html {
   font-size: 10px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1345,7 +1346,6 @@ main .sector-history .cont-box:before {
 }
 @media (min-width: 768px) {
   main .sector-history .cont-box {
-    width: 73%;
     margin: 0 auto;
   }
   main .sector-history .cont-box:before {
