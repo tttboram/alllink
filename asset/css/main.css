@@ -1503,16 +1503,16 @@ main .sector-service .service-tab {
 }
 @media (min-width: 1400px) {
   main .sector-service .service-tab .tab-item {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 33.6px;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.56px;
     font-weight: 400;
     color: #7f7f7f;
   }
   main .sector-service .service-tab .tab-item.on {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 33.6px;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.56px;
     font-weight: 700;
     color: #0189d0;
   }

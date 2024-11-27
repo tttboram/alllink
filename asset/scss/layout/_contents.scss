@@ -458,9 +458,9 @@ main {
         
         @include desktop {
           .tab-item {
-            @include fontStyle(20px, 33.6px, 400, #7f7f7f);
+            @include fontStyle(28px, 33.6px, 400, #7f7f7f);
             &.on {
-              @include fontStyle(20px, 33.6px, 700, #0189d0);
+              @include fontStyle(28px, 33.6px, 700, #0189d0);
             }
           }
         }
