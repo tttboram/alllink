@@ -574,7 +574,7 @@ header {
   }
 }
 header.scroll {
-  background-color: #DADADA;
+  background: rgba(255, 255, 255, 0.8);
 }
 header.scroll .inner .logo {
   width: 151px;
@@ -1066,6 +1066,12 @@ main .sector-tab .tab-list {
   padding-left: 20px;
   overflow: hidden;
 }
+@media (min-width: 768px) {
+  main .sector-tab .tab-list {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 main .sector-tab .tab-list li {
   display: flex;
   width: 140px !important;
@@ -1162,6 +1168,11 @@ main .sector-tab .tab-list li.on .tab-name {
 main .sector-tab .tab-content {
   margin-top: 20px;
   padding: 0 20px;
+}
+@media (min-width: 768px) {
+  main .sector-tab .tab-content {
+    margin-top: 50px;
+  }
 }
 main .sector-tab .tab-content > .cont {
   display: none;

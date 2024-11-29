@@ -16,8 +16,8 @@ header {
   //피씨 스크롤 작동했을 때
   //header.scroll
   &.scroll {
-    background-color: #DADADA;
-    
+    background: rgba(255, 255, 255, 0.8);
+
     .inner{
       .logo {
         @include backgroundImage(
