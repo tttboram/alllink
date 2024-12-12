@@ -1,9 +1,5 @@
 @import url("/asset/scss/utils/_mixin.scss");
-html {
-  font-size: 10px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+
 
 body {
   position: relative;
@@ -11,18 +7,12 @@ body {
   @include fontFace("Pretendard", 500, "normal", "Pretendard-Medium");
   @include fontFace("Pretendard", 400, "normal", "Pretendard-Regular");
   font-family: "Pretendard", "맑은고딕", Arial, sans-serif;
-  overflow: hidden;
 }
 
 .inner {
   width: calc(100% - 40px);
   margin: 0 auto;
   padding: 0 20px;
-  @include tablet {
-    width: 73%;
-    padding: 100px 0;
-  }
-
   //.inner-wide
   &.wide {
     width: 100%;

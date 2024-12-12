@@ -1,18 +1,3 @@
 @import url('/asset/scss/utils/_vars.scss');
 @import url('/asset/scss/utils/_mixin.scss');
 
-.inquery-button {
-    @include buttonStyle($primary);
-    display: inline-block;
-    &:hover{
-        @include buttonStyle(#24AFF7);
-    }
-
-    &.pressed {
-        @include buttonStyle(#005F8F);
-    }
-
-    &.disable {
-        @include buttonStyle(#aaa);
-    }
-}

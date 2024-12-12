@@ -1,26 +1,5 @@
 @import "./_vars.scss";
 
-// 디바이스 정의
-//break point에 따라 스타일 설정할 때 사용
-//@include 브레이크포인트 믹스인명 { 스타일정의 };
-
-@mixin tablet {
-  @media (min-width: #{$tablet}) {
-    @content;
-  }
-}
-
-@mixin laptop {
-  @media (min-width: #{$laptop}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop}) {
-    @content;
-  }
-}
 
 //주요 스타일 믹스인
 //font-face 설정
@@ -61,45 +40,3 @@
   background-size: $bgsize;
 }
 
-// 컴포넌트 관련 믹스인
-//문의하기,보내기 버튼
-//버튼이 배경컬러만 변경 되는 스타일
-//@include buttonStyle( 배경컬러 ){ 스타일 정의 };
-@mixin buttonStyle($backgroundColor) {
-  display: inline-block;
-  width: 119px;
-  height: 57px;
-  padding: 16px 0;
-  background-color: $backgroundColor;
-  box-sizing: border-box;
-  border-radius: 8px;
-  @include fontStyle(18px,25.2px,700,$white );
-  @include tablet {
-    width: 135px;
-    height: 57px;
-  }
-}
-
-//인풋창
-//@include inputStyle (넓이, 보더라인 컬러) { 스타일 정의 };
-@mixin inputStyle($width, $bordercolor) {
-  width: $width;
-  height: 43px;
-  box-sizing: border-box;
-  border: 1px solid $bordercolor;
-  padding: 12px 13px 12px 12px;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 14px;
-  @include letterSpacing(14px);
-  line-height: 19.6px;
-  color: #333;
-}
-
-//카드
-//@include cardStyle (넓이, 높이) { 스타일 정의 };
-@mixin cardStyle($width, $height) {
-  width: $width;
-  min-height: $height;
-  border-radius: 20px;
-}
