@@ -1,9 +1,5 @@
 @import url("/asset/scss/utils/_mixin.scss");
 
-html {
-  font-size: 10px;
-}
-
 body {
   position: relative;
   @include fontFace("Pretendard", 700, "normal", "Pretendard-Bold");
@@ -12,14 +8,40 @@ body {
   font-family: "Pretendard", "맑은고딕", Arial, sans-serif;
   max-width: 500px;
   margin: 0 auto;
+  background-color: $background;
+}
+
+//아이콘들
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  &.left-arrow {
+    @include backgroundImage(24px, 24px, "icon/chevron_left.svg");
+  }
+  &.more {
+    @include backgroundImage(24px, 24px, "icon/more.svg");
+  }
+  &.download{
+    @include backgroundImage(24px, 24px, "icon/download.svg");
+  }
+  &.download-black{
+    @include backgroundImage(24px, 24px, "icon/download_black.svg");
+  }
+  &.plus{
+    @include backgroundImage(24px, 24px, "icon/plus.svg");
+  }
 }
 
 main {
-  background-color: $background;
   height: calc(100vh - 56px);
 
   &.full {
     height: 100vh;
+  }
+
+  &.fix {
+    height: auto;
   }
 }
 
@@ -30,6 +52,7 @@ main {
   padding: 0 20px;
   //.inner-wide
   &.wide {
+    
     width: 100%;
   }
 }
@@ -37,7 +60,6 @@ main {
 .content {
   height: 100%;
 }
-
 
 //표 중간에 들아가는 라인 이미지
 .line {

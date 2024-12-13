@@ -4,16 +4,11 @@ header {
   box-sizing: border-box;
 
   .inner {
-    padding: 16px 20px;
-    
-    .left {
-       .left-arrow {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        @include backgroundImage(24px,24px,'icon/chevron_left.svg');
-       }
-    }
+    padding: 16px 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-sizing: border-box;
   }
 }
 

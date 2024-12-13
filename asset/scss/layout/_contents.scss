@@ -1,16 +1,188 @@
-// 008 약관동의
 .sector {
+  //sector-main 002 메인페이지
+  &-main {
+    padding: 12px 0 65px;
+    .banner {
+      width: 100%;
+      height: 115px;
+      @include backgroundImage(100%, 115px, "/common/banner.png");
+      border-radius: 16px;
+      margin-bottom: 16px;
+      .banner-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .receipt {
+      background-color: $white;
+      border-radius: 16px;
+
+      .receipt-cont {
+        position: relative;
+        padding-top: 0;
+
+        .logo {
+          padding: 10px 0;
+          text-align: center;
+          img {
+            display: inline-block;
+            padding: 9.6px 25.5px;
+            width: 203px;
+            height: 40px;
+            box-sizing: border-box;
+          }
+        }
+
+        .price {
+          padding: 12px 0;
+          text-align: center;
+          @include fontStyle(14px, 19.6px, 400, #222);
+        }
+        .amount {
+          @include fontStyle(18px, 25.2px, 700, #222);
+        }
+      }
+
+      .cont-box {
+        padding-bottom: 12px;
+        > div {
+          padding: 12px 0;
+          margin: 0 20px;
+          box-sizing: border-box;
+
+          table {
+            width: 100%;
+          }
+        }
+        .line {
+          &:before {
+            left: -30px;
+          }
+          &:after {
+            right: -30px;
+          }
+        }
+      }
+
+      .purchase-cont {
+        @include fontStyle(14px, 19.6px, 400, #222);
+        border-bottom: 1px solid #dcdee0;
+        table {
+          width: 100%;
+
+          tr {
+            display: inline-flexbox;
+            height: 24px;
+            &.title {
+              height: 32px;
+              td {
+                text-align: center;
+                padding-bottom: 12px;
+                height: 20px;
+              }
+            }
+
+            td {
+              padding-bottom: 4px;
+              vertical-align: middle;
+            }
+
+            &:last-child {
+              td {
+                padding-bottom: 12px;
+              }
+            }
+
+            &.item {
+              td {
+                &:nth-child(3) {
+                  text-align: center;
+                }
+                &:last-child {
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .tax-cont,
+      .price-cont {
+        padding: 4px 0;
+        @include fontStyle(14px, 19.6px, 400, $gray400);
+        border-bottom: 1px solid #dcdee0;
+        td {
+          height: 22px;
+          text-align: right;
+        }
+      }
+
+      .total-cont {
+        padding: 4px 0;
+        tr {
+          padding-bottom: 8px;
+          td {
+            @include fontStyle(16px, 22.4px, 700, #222);
+            padding-top: 8px;
+            height: 20px;
+            &:last-child {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .company-cont {
+        padding-top: 0 !important;
+        @include fontStyle(12px, 16.8px, 400, $gray400);
+        .barcode {
+          text-align: center;
+          img {
+            width: 245px;
+            height: 70px;
+          }
+        }
+        .info-box {
+          display: flex;
+
+          > ul {
+            width: 50%;
+          }
+        }
+      }
+
+      .btn-cont {
+        padding-bottom: 40px;
+        .btn {
+          position: relative;
+          width: calc(100% - 40px);
+          margin: 0 auto;
+          &:first-child {
+            margin-bottom: 12px;
+          }
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+  // sector-agree 008 약관동의
   &-agree {
     .title {
       display: flex;
       align-items: center;
       height: 200px;
-      @include fontStyle(28px,39.2px,400);
+      @include fontStyle(28px, 39.2px, 400);
       @include letterSpacing(28px);
       margin-bottom: 36px;
     }
 
-    .agree-box{
+    .agree-box {
       width: 100%;
       background-color: $white;
       border-radius: 12px;
@@ -23,19 +195,18 @@
         .check {
           display: flex;
           align-items: center;
-          gap:8px;
+          gap: 8px;
           padding: 12px 8px;
           box-sizing: border-box;
 
           .check-text {
-            @include fontStyle(16px,19.09px,400,#1b1b1b);
+            @include fontStyle(16px, 19.09px, 400, #1b1b1b);
             @include letterSpacing(16px);
-
           }
         }
       }
     }
-    
+
     .btn {
       bottom: 16px;
     }

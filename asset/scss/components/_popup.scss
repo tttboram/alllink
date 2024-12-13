@@ -1,17 +1,53 @@
 
+@import url("/asset/scss/utils/_var.scss");
 #popup {
   display: block;
   z-index: 99;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 20px;
+  width: calc(100% - 40px);
+  border-radius: 8px;
+  overflow: hidden;
   background-color: $white;
 
-  .inner {
-    width: 100%;
-    padding: 50px 16px;
-    box-sizing: border-box;
+  .popup-title {
+    padding: 12px 0;
+    text-align: center;
+    @include fontStyle(18px, 21.48px, 400, $white);
+  }
 
+  .popup-cont {
+    padding: 32px 0;
+    border-bottom:  1px solid #e6e6e6;
+    .lottie {
+      padding: 20px 0;
+    }
+
+    .sub-text {
+      display: inline-block;
+      width: 100%;
+      @include fontStyle(14px,19.6px,400,$gray500);
+      text-align: center;
+    }
+  }
+
+  &.naver {
+    .popup-title {
+      background-color: $naver;
+    }
+  }
+
+  &.kakao {
+    .popup-title {
+      background-color: $kakao;
+      color: #000;
+    }
+  }
+
+  .popup-btn {
+    padding: 16px 0;
+    text-align: center;
+    @include fontStyle(18px, 21.48px, 700, #000);
   }
 }
