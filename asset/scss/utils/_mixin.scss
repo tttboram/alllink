@@ -16,7 +16,7 @@
 
 //공통 폰트 스타일을 설정하는 대신 아래의 믹스인으로 폰트스타일을 작성한다
 //@include fontStyle(폰트사이즈, lineheight 값, font-weight 값) { 스타일 정의 };
-@mixin fontStyle($size, $lineheight, $weight, $color: #333) {
+@mixin fontStyle($size, $lineheight, $weight, $color: $gray500) {
   font-size: $size;
   line-height: $lineheight;
   letter-spacing: $size * -0.02;
@@ -26,7 +26,7 @@
 
 //letter-spacing
 @mixin letterSpacing($fontSize) {
-  letter-spacing: calc($fontSize * -0.02);
+  letter-spacing: calc($fontSize * -0.01);
 }
 
 // 배경이미지

@@ -1,0 +1,43 @@
+// 008 약관동의
+.sector {
+  &-agree {
+    .title {
+      display: flex;
+      align-items: center;
+      height: 200px;
+      @include fontStyle(28px,39.2px,400);
+      @include letterSpacing(28px);
+      margin-bottom: 36px;
+    }
+
+    .agree-box{
+      width: 100%;
+      background-color: $white;
+      border-radius: 12px;
+      padding: 16px;
+      box-sizing: border-box;
+
+      .input-box {
+        position: relative;
+        width: 100%;
+        .check {
+          display: flex;
+          align-items: center;
+          gap:8px;
+          padding: 12px 8px;
+          box-sizing: border-box;
+
+          .check-text {
+            @include fontStyle(16px,19.09px,400,#1b1b1b);
+            @include letterSpacing(16px);
+
+          }
+        }
+      }
+    }
+    
+    .btn {
+      bottom: 16px;
+    }
+  }
+}

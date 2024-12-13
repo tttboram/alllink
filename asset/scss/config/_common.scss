@@ -1,5 +1,8 @@
 @import url("/asset/scss/utils/_mixin.scss");
 
+html {
+  font-size: 10px;
+}
 
 body {
   position: relative;
@@ -7,10 +10,22 @@ body {
   @include fontFace("Pretendard", 500, "normal", "Pretendard-Medium");
   @include fontFace("Pretendard", 400, "normal", "Pretendard-Regular");
   font-family: "Pretendard", "맑은고딕", Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main {
+  background-color: $background;
+  height: calc(100vh - 56px);
+
+  &.full {
+    height: 100vh;
+  }
 }
 
 .inner {
   width: calc(100% - 40px);
+  height: 100%;
   margin: 0 auto;
   padding: 0 20px;
   //.inner-wide
@@ -19,7 +34,38 @@ body {
   }
 }
 
-button {
-  background: none;
-  border: none;
+.content {
+  height: 100%;
+}
+
+
+//표 중간에 들아가는 라인 이미지
+.line {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  width: calc(100% - 40px);
+
+  @include backgroundImage($basic, 20px, "common/line.png", contain);
+  max-width: 480px;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: $background;
+    border-radius: 50%;
+  }
+
+  &:before {
+    left: -25px;
+  }
+
+  &:after {
+    right: -25px;
+  }
 }

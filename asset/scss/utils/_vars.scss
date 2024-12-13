@@ -1,13 +1,16 @@
 
 //color
-$black: #000;
-$bold : #222;
-$black2 : #333;
-$white : #fff;
 $primary : #017F69;
-$disable : #ABABAB;
-$gray : #888;
-$kakao : #FFEB00;
-$naver :#2DB400;
+$gray500 : #222;
+$gray400 : #888;
+$gray300 : #ababab;
+$gray200 : #c9c9c9;
+$gray100 : #dcdee0;
+$background: #eee;
+$white: #fff;
+$kakao : #ffeb00;
+$naver : #2db400;
 
 
+//width
+$basic : calc(100% - 40px);

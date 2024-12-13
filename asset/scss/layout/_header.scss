@@ -1,0 +1,19 @@
+header {
+  height: 56px;
+  background-color: $background;
+  box-sizing: border-box;
+
+  .inner {
+    padding: 16px 20px;
+    
+    .left {
+       .left-arrow {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        @include backgroundImage(24px,24px,'icon/chevron_left.svg');
+       }
+    }
+  }
+}
+
