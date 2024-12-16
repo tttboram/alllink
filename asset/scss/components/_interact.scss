@@ -36,6 +36,44 @@ input[type="checkbox"] {
   }
 }
 
+//토글버튼
+.toggle {
+  label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    input[type="checkbox"]{
+      display: block;
+      appearance: none;
+      position: relative;
+      border-radius: 37px;
+      width: 41px;
+      height: 20px;
+      background-color: $gray200;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $white;
+        transition: left 250ms linear;
+      }
+
+    &:checked {
+      background-color: $primary;
+      &::before {
+        left: 22px;
+      }
+    }
+    }
+
+  }
+}
+
 //버튼
 .btn {
   width: 100%;

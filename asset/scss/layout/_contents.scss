@@ -211,4 +211,123 @@
       bottom: 16px;
     }
   }
+
+  // sector-receipt 010 내역리스트
+  &-receipt {
+    .setting-box {
+      padding: 24px 20px;
+      background-color: $white;
+      border-radius: 12px;
+      margin: 1px 0 16px;
+
+      .point-area {
+        text-align: center;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $gray100;
+        .point-title {
+          @include fontStyle(20px, 23.87px, 700, #333);
+          margin-bottom: 4px;
+        }
+        .sub-text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include fontStyle(16px, 19.09px, 400, #333 );
+          .point {
+            width: 100px;
+            @include fontStyle(18px, 21.48px, 700,$primary);
+          }
+        }
+      }
+      .setting-area {
+        padding-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .setting-title {
+          @include fontStyle(16px, 19.09px, 400, #333);
+        }
+      }
+    }
+
+    .reciept-box {
+      margin-top: 24px;
+
+      .title {
+        @include fontStyle(14px, 19.6px, 400, $gray500);
+        text-align: center;
+        margin-bottom: 8px;
+
+        .slide-title {
+          @include fontStyle(18px, 25.2px,700,$gray500);
+        }
+      }
+
+      .receipt-item {
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding: 16px 0;
+          border-bottom:1px solid $gray100;
+          .left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .item-info {
+              span {
+                display: block;
+
+                &.store {
+                  @include fontStyle(16px, 22.4px,400,$gray500);
+                }
+
+                &.date {
+                  @include fontStyle(14px, 19.6px,400,$gray400);
+                }
+              }
+            }
+          }
+          .right {
+            .purchase-info {
+              span {
+                display: block;
+                text-align: right;
+
+                &.price {
+                  @include fontStyle(16px, 22.4px,700,$gray500);
+                }
+
+                &.purchase-state {
+                  @include fontStyle(14px, 19.6px,400,$gray400);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .slick-arrow {
+        top: -21px;
+        &:before {
+          content:'';
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+        }
+
+        //.slick-arrow.slick-prev
+        &.slick-prev {
+          left: 32.4%;
+          @include backgroundImage(24px,24px,('/icon/slick-left.svg'))
+        }
+
+        //.slick-arrow.slick-next
+        &.slick-next {
+          right: 32.4%;
+          @include backgroundImage(24px,24px,('/icon/slick-right.svg'))
+        }
+      }
+    }
+  }
 }

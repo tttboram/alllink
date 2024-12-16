@@ -1,5 +1,6 @@
 $(function () {
   popupEvent();
+  slickEvent();
 });
 
 
@@ -11,3 +12,9 @@ function popupEvent() {
     "left": (($('body').width() - $('#popup').outerWidth()) / 2 + $(window).scrollLeft()) + "px",
   });
 };
+
+
+//슬릭
+function slickEvent() {
+  $('.reciept-slide').slick();
+}

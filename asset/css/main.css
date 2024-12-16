@@ -124,7 +124,7 @@ body {
 
 menu,
 ol,
-ul {
+ul, li {
   list-style: none;
 }
 
@@ -223,6 +223,30 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.icon.settings {
+  width: 24px;
+  height: 24px;
+  background-image: url("/asset/image/icon/settings.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon.done {
+  width: 24px;
+  height: 24px;
+  background-image: url("/asset/image/icon/done.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon.cancel {
+  width: 24px;
+  height: 24px;
+  background-image: url("/asset/image/icon/cancel.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 main {
   height: calc(100vh - 56px);
@@ -242,6 +266,10 @@ main.fix {
 }
 .inner.wide {
   width: 100%;
+}
+.inner.receipt {
+  width: calc(100% - 27px);
+  padding: 0 13.5px;
 }
 
 .content {
@@ -308,6 +336,40 @@ input[type=checkbox]:checked + label:after {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.toggle label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.toggle label input[type=checkbox] {
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  border-radius: 37px;
+  width: 41px;
+  height: 20px;
+  background-color: #c9c9c9;
+}
+.toggle label input[type=checkbox]:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: left 250ms linear;
+}
+.toggle label input[type=checkbox]:checked {
+  background-color: #017F69;
+}
+.toggle label input[type=checkbox]:checked::before {
+  left: 22px;
 }
 
 .btn {
@@ -686,4 +748,146 @@ header .inner {
 }
 .sector-agree .btn {
   bottom: 16px;
+}
+.sector-receipt .setting-box {
+  padding: 24px 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 1px 0 16px;
+}
+.sector-receipt .setting-box .point-area {
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dcdee0;
+}
+.sector-receipt .setting-box .point-area .point-title {
+  font-size: 20px;
+  line-height: 23.87px;
+  letter-spacing: -0.4px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+.sector-receipt .setting-box .point-area .sub-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 19.09px;
+  letter-spacing: -0.32px;
+  font-weight: 400;
+  color: #333;
+}
+.sector-receipt .setting-box .point-area .sub-text .point {
+  width: 100px;
+  font-size: 18px;
+  line-height: 21.48px;
+  letter-spacing: -0.36px;
+  font-weight: 700;
+  color: #017F69;
+}
+.sector-receipt .setting-box .setting-area {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sector-receipt .setting-box .setting-area .setting-title {
+  font-size: 16px;
+  line-height: 19.09px;
+  letter-spacing: -0.32px;
+  font-weight: 400;
+  color: #333;
+}
+.sector-receipt .reciept-box {
+  margin-top: 24px;
+}
+.sector-receipt .reciept-box .title {
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+  font-weight: 400;
+  color: #222;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.sector-receipt .reciept-box .title .slide-title {
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -0.36px;
+  font-weight: 700;
+  color: #222;
+}
+.sector-receipt .reciept-box .receipt-item li {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #dcdee0;
+}
+.sector-receipt .reciept-box .receipt-item li .left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sector-receipt .reciept-box .receipt-item li .left .item-info span {
+  display: block;
+}
+.sector-receipt .reciept-box .receipt-item li .left .item-info span.store {
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: -0.32px;
+  font-weight: 400;
+  color: #222;
+}
+.sector-receipt .reciept-box .receipt-item li .left .item-info span.date {
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+  font-weight: 400;
+  color: #888;
+}
+.sector-receipt .reciept-box .receipt-item li .right .purchase-info span {
+  display: block;
+  text-align: right;
+}
+.sector-receipt .reciept-box .receipt-item li .right .purchase-info span.price {
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: -0.32px;
+  font-weight: 700;
+  color: #222;
+}
+.sector-receipt .reciept-box .receipt-item li .right .purchase-info span.purchase-state {
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+  font-weight: 400;
+  color: #888;
+}
+.sector-receipt .reciept-box .slick-arrow {
+  top: -21px;
+}
+.sector-receipt .reciept-box .slick-arrow:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.sector-receipt .reciept-box .slick-arrow.slick-prev {
+  left: 32.4%;
+  width: 24px;
+  height: 24px;
+  background-image: url("/asset/image//icon/slick-left.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sector-receipt .reciept-box .slick-arrow.slick-next {
+  right: 32.4%;
+  width: 24px;
+  height: 24px;
+  background-image: url("/asset/image//icon/slick-right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */
