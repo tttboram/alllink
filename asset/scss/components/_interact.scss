@@ -43,7 +43,7 @@ input[type="checkbox"] {
     align-items: center;
     cursor: pointer;
 
-    input[type="checkbox"]{
+    input[type="checkbox"] {
       display: block;
       appearance: none;
       position: relative;
@@ -63,14 +63,13 @@ input[type="checkbox"] {
         transition: left 250ms linear;
       }
 
-    &:checked {
-      background-color: $primary;
-      &::before {
-        left: 22px;
+      &:checked {
+        background-color: $primary;
+        &::before {
+          left: 22px;
+        }
       }
     }
-    }
-
   }
 }
 
@@ -80,7 +79,9 @@ input[type="checkbox"] {
   height: 56px;
   border-radius: 40px;
   a {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 16px 0;
     box-sizing: border-box;
@@ -101,12 +102,16 @@ input[type="checkbox"] {
 
   &.naver {
     background-color: $naver;
+    a{
+      gap: 8px;
+    }
   }
 
   &.kakao {
     background-color: $kakao;
     a {
       color: $gray500;
+      gap: 8px;
     }
   }
 
@@ -124,6 +129,54 @@ input[type="checkbox"] {
       gap: 8px;
     }
   }
+
+  &.outline {
+    height: 51px;
+    border: 1px solid $gray500;
+    a{
+      color:$gray500;
+    }
+  }
+
+  &.underline {
+    a{
+      color:$gray500;
+      text-decoration: underline;
+      padding-bottom: 0;
+    }
+  }
+
+}
+
+.btn-group {
+  position: absolute;
+  bottom: 32px;
+  width: calc(100% - 40px);
+}
+
+//sub-button
+button {
+
+  //설정 변경, 설정 취소 버튼
+  &.change {
+    height: 24px;
+    padding: 2px 8px;
+    border: 1px solid $gray400;
+    border-radius: 8px;
+    box-sizing: border-box;
+    @include fontStyle(14px, 19.6px, 400, $gray400);
+  }
+
+  //해지버튼
+  &.cancel {
+    height: 35px;
+    padding: 8px 16px;
+    border:1px solid $gray300;
+    border-radius: 8px;
+    @include fontStyle(16px, 19.09px, 400, $gray300);
+    box-sizing: border-box;
+  }
+
 }
 
 //말풍선
@@ -146,10 +199,15 @@ input[type="checkbox"] {
   }
 }
 
-
 //애니메이션
 @keyframes bounce {
-  0% { top: -41px; }
-  50%   { top: -30px; }
-  100% { top: -41px; }
+  0% {
+    top: -41px;
+  }
+  50% {
+    top: -30px;
+  }
+  100% {
+    top: -41px;
+  }
 }
