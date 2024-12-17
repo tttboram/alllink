@@ -1,7 +1,7 @@
 .sector {
   //sector-main 002 메인페이지
   &-main {
-    padding: 12px 0 65px;
+    padding-top: 12px;
     .banner {
       width: 100%;
       height: 115px;
@@ -158,8 +158,59 @@
           position: relative;
           width: calc(100% - 40px);
           margin: 0 auto;
-          &:first-child {
-            margin-bottom: 12px;
+          margin-bottom: 12px;
+        }
+
+        &.setting {
+          padding-bottom: 22px;
+        }
+      }
+
+      .auto-box {
+        .title-area {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap:8px;
+          .title {
+            @include fontStyle(16px, 19.09px,700, $gray500);
+          }
+          button {
+            width: 24px;
+            height: 24px;
+            padding: 0;
+            span {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .setting-area.on {
+          margin-top: 16px;
+          border-top: 1px solid #eee;
+          padding-top: 0;
+          padding-bottom: 2px;
+          .naver-btn {
+            padding-top: 12px;
+            margin-bottom: 0;
+            .naver {
+              margin-bottom: 12px;
+            }
+          }
+          .kakao-btn {
+            margin-top: 0;
+          }
+
+          .btn {
+            margin-bottom: 0;
+          }
+        }
+        .ing {
+          width: calc(100% - 40px);
+          margin: 0 auto;
+          &.kakao {
+            border-top: 0;
           }
         }
       }
@@ -352,93 +403,7 @@
         }
       }
 
-      &.auto-box {
-        overflow: hidden;
-        .title-area {
-          padding-bottom: 0;
-          margin-bottom: 0;
-          border-bottom: none;
-        }
-        .default {
-          .state-area {
-            span {
-              display: none;
-              align-items: center;
-              gap: 8px;
-              padding: 7.5px 0 7.5px 16px;
-              border-radius: 8px;
-              margin-bottom: 8px;
-              @include fontStyle(16px, 19.09px, 400);
-  
-              &.naver {
-                margin-top: 12px;
-                color: $white;
-              }
-  
-              &:before {
-                content: "";
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                @include backgroundImage(20px, 20px, "/icon/check.svg");
-              }
-            }
-          }
-        }
-
-        .setting-area {
-          display: none;
-          padding: 6px 0;
-          >div {
-            padding-top: 16px;
-            margin-bottom: 12px;
-            &:last-child {
-              padding-top: 0;
-              margin-bottom: 0;
-              margin-top: 12px;
-            }
-          }
-          .ing {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            background-color: transparent;
-            margin-bottom: 12px;
-            @include fontStyle(16px, 19.09px, 700, $gray500);
-            padding: 16px 0;
-            
-            span {
-              display: flex;
-              align-items: center;
-              gap: 4px;
-
-              &:before {
-                content: "";
-                display: inline-block;
-                width: 24px;
-                height: 24px;
-                @include backgroundImage(24px, 24px, "/icon/naver.svg");
-              }
-            }
-
-            &.kakao {
-
-              border-top: 1px solid $gray100;
-              margin-bottom: 0;
-              span {
-                &:before{
-                  @include backgroundImage(24px, 24px, "/icon/kakao.svg");
-                }
-              }
-            }
-            
-          }
-
-          &.on {
-            display: block;
-          }
-        }
-      }
+ 
 
       &.user-info-box {
         .info-area {

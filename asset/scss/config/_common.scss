@@ -34,6 +34,9 @@ body {
     @include backgroundImage(24px, 24px, "icon/chevron_left.svg");
     transform: rotate(-180deg)
   }
+  &.bottom-arrow {
+    @include backgroundImage(24px, 24px, "icon/bottom_arrow.svg");
+  }
   &.more {
     @include backgroundImage(24px, 24px, "icon/more.svg");
   }
@@ -45,6 +48,9 @@ body {
   }
   &.plus{
     @include backgroundImage(24px, 24px, "icon/plus.svg");
+  }
+  &.plus-white{
+    @include backgroundImage(24px, 24px, "icon/plus_white.svg");
   }
   &.settings{
     @include backgroundImage(24px, 24px, "icon/settings.svg");

@@ -79,10 +79,14 @@ function settingChange() {
   var changeBtn = $('.default .change');
   changeBtn.on('click',function(){
     $('.setting-area').toggleClass('on');
-    if($('.setting-area').hasClass('on')){
-      $(this).text('취소');
+    if($(this).is('button')){
+      if($('.setting-area').hasClass('on')){
+        $(this).text('취소');
+      }else {
+        $(this).text('변경');
+      }
     }else {
-      $(this).text('변경');
+      $(this).css('transform','rotate(-180deg)')
     }
   })
 }
