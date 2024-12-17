@@ -1,5 +1,5 @@
 $(function () {
-  
+  popupPosition();
   popupEvent();
   popupClose();
   slickEvent();
@@ -22,7 +22,7 @@ function popupEvent() {
   var popupBtn = $('.popup-open a');
   
   popupBtn.on('click',function(){
-    popupPosition();
+    
     var targetPopup = $(this).data('target');
     $('.'+targetPopup).css('display','block');
     $('.dimmed').css('display','block');

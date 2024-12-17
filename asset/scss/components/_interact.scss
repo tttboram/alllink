@@ -20,6 +20,7 @@ input[type="checkbox"] {
   }
   &:checked {
     & + label {
+      background-color: #fff;
       &:after {
         content: "";
         display: inline-block;
@@ -253,6 +254,12 @@ button {
           width: 20px;
           height: 20px;
           @include backgroundImage(20px, 20px, "/icon/check.svg");
+        }
+
+        &.naver {
+          &:before {
+            @include backgroundImage(20px, 20px, "/icon/check_white.svg");
+          }
         }
       }
     }

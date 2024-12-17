@@ -172,6 +172,12 @@ body {
 }
 @font-face {
   font-family: Pretendard;
+  font-weight: 600;
+  font-style: normal;
+  src: url("/asset/font/Pretendard-SemiBold.woff") format("woff"), url("/asset/font/Pretendard-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Pretendard;
   font-weight: 500;
   font-style: normal;
   src: url("/asset/font/Pretendard-Medium.woff") format("woff"), url("/asset/font/Pretendard-Medium.ttf") format("truetype");
@@ -295,6 +301,22 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.icon.shield {
+  width: 56px;
+  height: 53px;
+  background-image: url("/asset/image/icon/shield.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon.coin {
+  width: 56px;
+  height: 53px;
+  background-image: url("/asset/image/icon/coin.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 main {
   height: calc(100vh - 56px);
@@ -367,6 +389,9 @@ input[type=checkbox] + label {
   box-sizing: border-box;
   border: 1px solid #017F69;
   border-radius: 2px;
+}
+input[type=checkbox]:checked + label {
+  background-color: #fff;
 }
 input[type=checkbox]:checked + label:after {
   content: "";
@@ -601,6 +626,14 @@ button.cancel {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.auto-box .default .state-area span.naver:before {
+  width: 20px;
+  height: 20px;
+  background-image: url("/asset/image//icon/check_white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .auto-box .setting-area {
   display: none;
   padding: 6px 0;
@@ -766,13 +799,91 @@ button.cancel {
 .popup.logout .popup-cont, .popup.signout .popup-cont {
   padding-bottom: 28px;
 }
+.popup.main {
+  display: block;
+  overflow: visible;
+}
+.popup.main .popup-cont {
+  padding: 40px 20px;
+}
+.popup.main .popup-cont .close {
+  top: 12px;
+}
+.popup.main .popup-cont .title {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 32px;
+}
+.popup.main .popup-cont ul li {
+  margin-bottom: 40px;
+}
+.popup.main .popup-cont ul li .title {
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -0.36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+.popup.main .popup-cont ul li .cont-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #eee;
+  border-radius: 8px;
+  padding: 16px 9px;
+}
+.popup.main .popup-cont ul li .cont-box .text {
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+  font-weight: 400;
+  color: #222;
+  margin-right: 3px;
+}
+.popup.main .popup-cont ul li:last-child {
+  margin-bottom: 0;
+}
+.popup.main .popup-btn {
+  background-color: #017F69;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.popup.main .popup-btn span {
+  font-size: 18px;
+  line-height: 21.48px;
+  letter-spacing: -0.36px;
+  font-weight: 600;
+  color: #fff;
+}
+.popup.main .input-box {
+  position: absolute;
+  bottom: -38px;
+  left: 0;
+}
+.popup.main .input-box .check {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.popup.main .input-box .check span {
+  font-size: 16px;
+  line-height: 19.09px;
+  letter-spacing: -0.32px;
+  font-weight: 400;
+  color: #fff;
+}
 .popup .popup-btn {
   padding: 16px 0;
   text-align: center;
   font-size: 18px;
   line-height: 21.48px;
   letter-spacing: -0.36px;
-  font-weight: 700;
+  font-weight: 600;
   color: #000;
 }
 

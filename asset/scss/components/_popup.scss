@@ -1,4 +1,3 @@
-
 @import url("/asset/scss/utils/_var.scss");
 .popup {
   display: none;
@@ -20,7 +19,7 @@
   .popup-cont {
     position: relative;
     padding: 32px 0;
-    border-bottom:  1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
     .lottie {
       padding: 20px 0;
     }
@@ -28,7 +27,7 @@
     .sub-text {
       display: inline-block;
       width: 100%;
-      @include fontStyle(14px,19.6px,400,$gray500);
+      @include fontStyle(14px, 19.6px, 400, $gray500);
       text-align: center;
     }
 
@@ -52,17 +51,83 @@
     }
   }
 
-  &.logout , &.signout {
+  &.logout,
+  &.signout {
     padding-top: 12px;
     .popup-cont {
       padding-bottom: 28px;
     }
   }
 
+  &.main {
+    display: block;
+    overflow: visible;
+    .popup-cont {
+      padding: 40px 20px;
+      .close {
+        top: 12px;
+      }
+      .title {
+        @include fontStyle(20px, 28px, 700, #222);
+        margin-bottom: 32px;
+      }
+
+      ul {
+        li {
+          margin-bottom: 40px;
+          .title {
+            @include fontStyle(18px, 25.2px, 700, #222);
+            margin-bottom: 8px;
+          }
+          .cont-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #eee;
+            border-radius: 8px;
+            padding: 16px 9px;
+
+            .text {
+              @include fontStyle(14px, 19.6px, 400, #222);
+              margin-right: 3px;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .popup-btn {
+      background-color: $primary;
+      border-top: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      span {
+       @include fontStyle(18px, 21.48px, 600, $white);
+      }
+    }
+
+    .input-box {
+      position: absolute;
+      bottom: -38px;
+      left: 0;
+      .check {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        span {
+          @include fontStyle(16px, 19.09px, 400, $white);
+        }
+      }
+    }
+  }
+
   .popup-btn {
     padding: 16px 0;
     text-align: center;
-    @include fontStyle(18px, 21.48px, 700, #000);
+    @include fontStyle(18px, 21.48px, 600, #000);
   }
 }
 
