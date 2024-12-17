@@ -38,6 +38,9 @@ body {
   &.bottom-arrow {
     @include backgroundImage(24px, 24px, "icon/bottom_arrow.svg");
   }
+  &.bottom-arrow.on {
+    transform: rotate(-180deg);
+  }
   &.more {
     @include backgroundImage(24px, 24px, "icon/more.svg");
   }
@@ -109,7 +112,7 @@ main {
 .line {
   position: relative;
   display: inline-block;
-  padding: 0 20px;
+  margin: 0 20px;
   width: calc(100% - 40px);
 
   @include backgroundImage($basic, 20px, "common/line.png", contain);
@@ -128,10 +131,10 @@ main {
   }
 
   &:before {
-    left: -25px;
+    left: -30px;
   }
 
   &:after {
-    right: -25px;
+    right: -30px;
   }
 }

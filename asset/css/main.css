@@ -229,6 +229,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.icon.bottom-arrow.on {
+  transform: rotate(-180deg);
+}
 .icon.more {
   width: 24px;
   height: 24px;
@@ -349,7 +352,7 @@ main.fix {
 .line {
   position: relative;
   display: inline-block;
-  padding: 0 20px;
+  margin: 0 20px;
   width: calc(100% - 40px);
   width: calc(100% - 40px);
   height: 20px;
@@ -370,10 +373,10 @@ main.fix {
   border-radius: 50%;
 }
 .line:before {
-  left: -25px;
+  left: -30px;
 }
 .line:after {
-  right: -25px;
+  right: -30px;
 }
 
 input[type=checkbox] {
@@ -983,12 +986,6 @@ header .inner .left {
 .sector-main .receipt .cont-box > div table {
   width: 100%;
 }
-.sector-main .receipt .cont-box .line:before {
-  left: -30px;
-}
-.sector-main .receipt .cont-box .line:after {
-  right: -30px;
-}
 .sector-main .receipt .purchase-cont {
   font-size: 14px;
   line-height: 19.6px;
@@ -1001,7 +998,6 @@ header .inner .left {
   width: 100%;
 }
 .sector-main .receipt .purchase-cont table tr {
-  display: inline-flexbox;
   height: 24px;
 }
 .sector-main .receipt .purchase-cont table tr.title {
@@ -1177,6 +1173,16 @@ header .inner .left {
   color: #1b1b1b;
   letter-spacing: -0.16px;
 }
+.sector-agree .agree-box .line {
+  width: 100%;
+  margin: 0;
+}
+.sector-agree .agree-box .line:before {
+  left: -25px;
+}
+.sector-agree .agree-box .line:after {
+  right: -25px;
+}
 .sector-agree .btn {
   bottom: 16px;
 }
@@ -1348,6 +1354,37 @@ header .inner .left {
 }
 .sector-setting > div .title-area .title {
   margin-left: 4px;
+}
+.sector-setting > div.auto-box {
+  padding-bottom: 4px;
+}
+.sector-setting > div.auto-box .state-area .state {
+  margin-top: 12px;
+}
+.sector-setting > div.auto-box .state-area .state .kakao {
+  margin-bottom: 16px;
+}
+.sector-setting > div.auto-box .setting-area div:first-child {
+  padding-top: 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+.sector-setting > div.auto-box .setting-area div:first-child .ing {
+  padding: 16px 0 4px;
+}
+.sector-setting > div.auto-box .setting-area div:last-child {
+  margin-top: 12px;
+}
+.sector-setting > div.auto-box .setting-area div:last-child .ing.kakao {
+  border-top: none;
+}
+.sector-setting > div.auto-box .setting-area .btn.kakao {
+  margin-bottom: 25px;
+}
+.sector-setting > div:first-child .title-area {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .sector-setting > div.user-info-box .info-area table {
   width: 100%;

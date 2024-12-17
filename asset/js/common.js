@@ -86,7 +86,7 @@ function settingChange() {
         $(this).text('변경');
       }
     }else {
-      $(this).css('transform','rotate(-180deg)')
+      $(this).toggleClass('on');
     }
   })
 }
