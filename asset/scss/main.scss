@@ -1,11 +1,11 @@
-@import '../scss/utils/vars';
-@import '../scss/utils/_vars';
+@import './utils/_mixin';
+@import './utils/_vars';
 
-@import '../scss/config/_reset';
-@import '../scss/config/_common';
+@import './config/_reset';
+@import './config/_common';
 
-@import '../scss/components/_interact';
-@import '../scss/components/_popup';
+@import './components/_interact';
+@import './components/_popup';
 
-@import '../scss/layout/_header';
-@import '../scss/layout/_contents';
+@import './layout/_header';
+@import './layout/_contents';
