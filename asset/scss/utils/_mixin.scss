@@ -1,4 +1,4 @@
-@import "./_vars.scss";
+@import "../utils/vars";
 
 
 //주요 스타일 믹스인
@@ -9,8 +9,8 @@
     font-weight: #{$font-weight};
     font-style: #{$font-style};
 
-    src: url("/asset/font/#{$font-name}.woff") format("woff"),
-      url("/asset/font/#{$font-name}.ttf") format("truetype");
+    src: url("../asset/font/#{$font-name}.woff") format("woff"),
+      url("../asset/font/#{$font-name}.ttf") format("truetype");
   }
 }
 
@@ -34,7 +34,7 @@
 @mixin backgroundImage($width, $height, $file, $bgsize: cover) {
   width: $width;
   height: $height;
-  background-image: url("/asset/image/#{$file}");
+  background-image: url("../asset/image/#{$file}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: $bgsize;
