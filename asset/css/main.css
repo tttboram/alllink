@@ -3,10 +3,10 @@
    v5.0.2 | 20191019
    License: none (public domain)
 */
-@import url("/asset/scss/utils/_mixin.scss");
-@import url("/asset/scss/utils/_vars.scss");
-@import url("/asset/scss/utils/_mixin.scss");
-@import url("/asset/scss/utils/_vars.scss");
+@import url("../asset/scss/utils/_mixin.scss");
+@import url("../asset/scss/utils/_vars.scss");
+@import url("../asset/scss/utils/_mixin.scss");
+@import url("../asset/scss/utils/_vars.scss");
 html,
 body,
 div,
@@ -168,25 +168,25 @@ body {
   font-family: Pretendard;
   font-weight: 700;
   font-style: normal;
-  src: url("/asset/font/Pretendard-Bold.woff") format("woff"), url("/asset/font/Pretendard-Bold.ttf") format("truetype");
+  src: url("../asset/font/Pretendard-Bold.woff") format("woff"), url("../asset/font/Pretendard-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: Pretendard;
   font-weight: 600;
   font-style: normal;
-  src: url("/asset/font/Pretendard-SemiBold.woff") format("woff"), url("/asset/font/Pretendard-SemiBold.ttf") format("truetype");
+  src: url("../asset/font/Pretendard-SemiBold.woff") format("woff"), url("../asset/font/Pretendard-SemiBold.ttf") format("truetype");
 }
 @font-face {
   font-family: Pretendard;
   font-weight: 500;
   font-style: normal;
-  src: url("/asset/font/Pretendard-Medium.woff") format("woff"), url("/asset/font/Pretendard-Medium.ttf") format("truetype");
+  src: url("../asset/font/Pretendard-Medium.woff") format("woff"), url("../asset/font/Pretendard-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: Pretendard;
   font-weight: 400;
   font-style: normal;
-  src: url("/asset/font/Pretendard-Regular.woff") format("woff"), url("/asset/font/Pretendard-Regular.ttf") format("truetype");
+  src: url("../asset/font/Pretendard-Regular.woff") format("woff"), url("../asset/font/Pretendard-Regular.ttf") format("truetype");
 }
 
 .kakao {
@@ -207,7 +207,7 @@ body {
 .icon.left-arrow {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/chevron_left.svg");
+  background-image: url("../asset/image/icon/chevron_left.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -215,7 +215,7 @@ body {
 .icon.right-arrow {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/chevron_left.svg");
+  background-image: url("../asset/image/icon/chevron_left.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -224,7 +224,7 @@ body {
 .icon.bottom-arrow {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/bottom_arrow.svg");
+  background-image: url("../asset/image/icon/bottom_arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -235,7 +235,7 @@ body {
 .icon.more {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/more.svg");
+  background-image: url("../asset/image/icon/more.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -243,7 +243,7 @@ body {
 .icon.download {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/download.svg");
+  background-image: url("../asset/image/icon/download.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -251,7 +251,7 @@ body {
 .icon.download-black {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/download_black.svg");
+  background-image: url("../asset/image/icon/download_black.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -259,7 +259,7 @@ body {
 .icon.plus {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/plus.svg");
+  background-image: url("../asset/image/icon/plus.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -267,7 +267,7 @@ body {
 .icon.plus-white {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/plus_white.svg");
+  background-image: url("../asset/image/icon/plus_white.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -275,7 +275,7 @@ body {
 .icon.settings {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/settings.svg");
+  background-image: url("../asset/image/icon/settings.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -283,7 +283,7 @@ body {
 .icon.done {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/done.svg");
+  background-image: url("../asset/image/icon/done.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -291,7 +291,7 @@ body {
 .icon.cancel {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/cancel.svg");
+  background-image: url("../asset/image/icon/cancel.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -299,7 +299,7 @@ body {
 .icon.close {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/close.svg");
+  background-image: url("../asset/image/icon/close.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -307,7 +307,7 @@ body {
 .icon.shield {
   width: 56px;
   height: 53px;
-  background-image: url("/asset/image/icon/shield.svg");
+  background-image: url("../asset/image/icon/shield.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,7 +315,7 @@ body {
 .icon.coin {
   width: 56px;
   height: 53px;
-  background-image: url("/asset/image/icon/coin.svg");
+  background-image: url("../asset/image/icon/coin.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -356,7 +356,7 @@ main.fix {
   padding: 0;
   width: calc(100% - 40px);
   height: 20px;
-  background-image: url("/asset/image/common/line.png");
+  background-image: url("../asset/image/common/line.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -408,7 +408,7 @@ input[type=checkbox]:checked + label:after {
   border-radius: 2px;
   width: 16px;
   height: 16px;
-  background-image: url("/asset/image/icon/check_fill.svg");
+  background-image: url("../asset/image/icon/check_fill.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -624,7 +624,7 @@ button.cancel {
   height: 20px;
   width: 20px;
   height: 20px;
-  background-image: url("/asset/image//icon/check.svg");
+  background-image: url("../asset/image//icon/check.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -632,7 +632,7 @@ button.cancel {
 .auto-box .default .state-area span.naver:before {
   width: 20px;
   height: 20px;
-  background-image: url("/asset/image//icon/check_white.svg");
+  background-image: url("../asset/image//icon/check_white.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -675,7 +675,7 @@ button.cancel {
   height: 24px;
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image//icon/naver.svg");
+  background-image: url("../asset/image//icon/naver.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -687,7 +687,7 @@ button.cancel {
 .auto-box .setting-area .ing.kakao span:before {
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image//icon/kakao.svg");
+  background-image: url("../asset/image//icon/kakao.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -706,7 +706,7 @@ button.cancel {
   border-radius: 8px;
   width: 265px;
   height: 46px;
-  background-image: url("/asset/image//common/bubble.png");
+  background-image: url("../asset/image//common/bubble.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -729,7 +729,7 @@ button.cancel {
   width: 310px;
   width: 310px;
   height: 46px;
-  background-image: url("/asset/image//common/bubble_black.png");
+  background-image: url("../asset/image//common/bubble_black.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -929,7 +929,7 @@ header .inner .left {
   height: 115px;
   width: 100%;
   height: 115px;
-  background-image: url("/asset/image/common/banner.png");
+  background-image: url("../asset/image/common/banner.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1094,7 +1094,7 @@ header .inner .left {
   margin: 0 auto;
   width: 258px;
   height: 100px;
-  background-image: url("/asset/image/common/logo.png");
+  background-image: url("../asset/image/common/logo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 73%;
@@ -1348,7 +1348,7 @@ header .inner .left {
   transform: translateX(-78px);
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/slick-left.svg");
+  background-image: url("../asset/image/icon/slick-left.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1358,7 +1358,7 @@ header .inner .left {
   transform: translateX(78px);
   width: 24px;
   height: 24px;
-  background-image: url("/asset/image/icon/slick-right.svg");
+  background-image: url("../asset/image/icon/slick-right.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
