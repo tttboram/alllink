@@ -353,7 +353,7 @@ main.fix {
   position: relative;
   display: inline-block;
   margin: 0 20px;
-  width: calc(100% - 40px);
+  padding: 0;
   width: calc(100% - 40px);
   height: 20px;
   background-image: url("/asset/image/common/line.png");
@@ -390,7 +390,7 @@ input[type=checkbox] + label {
   height: 16px;
   margin: 4px;
   box-sizing: border-box;
-  border: 1px solid #017F69;
+  border: 1px solid #444;
   border-radius: 2px;
 }
 input[type=checkbox]:checked + label {
@@ -976,6 +976,7 @@ header .inner .left {
   color: #222;
 }
 .sector-main .receipt .cont-box {
+  position: relative;
   padding-bottom: 12px;
 }
 .sector-main .receipt .cont-box > div {
@@ -986,7 +987,7 @@ header .inner .left {
 .sector-main .receipt .cont-box > div table {
   width: 100%;
 }
-.sector-main .receipt .purchase-cont {
+.sector-main .receipt .cont-box > div.purchase-cont {
   font-size: 14px;
   line-height: 19.6px;
   letter-spacing: -0.28px;
@@ -994,35 +995,34 @@ header .inner .left {
   color: #222;
   border-bottom: 1px solid #dcdee0;
 }
-.sector-main .receipt .purchase-cont table {
+.sector-main .receipt .cont-box > div.purchase-cont table {
   width: 100%;
 }
-.sector-main .receipt .purchase-cont table tr {
+.sector-main .receipt .cont-box > div.purchase-cont table tr {
   height: 24px;
 }
-.sector-main .receipt .purchase-cont table tr.title {
+.sector-main .receipt .cont-box > div.purchase-cont table tr.title {
   height: 32px;
 }
-.sector-main .receipt .purchase-cont table tr.title td {
+.sector-main .receipt .cont-box > div.purchase-cont table tr.title td {
   text-align: center;
   padding-bottom: 12px;
   height: 20px;
 }
-.sector-main .receipt .purchase-cont table tr td {
+.sector-main .receipt .cont-box > div.purchase-cont table tr td {
   padding-bottom: 4px;
   vertical-align: middle;
 }
-.sector-main .receipt .purchase-cont table tr:last-child td {
+.sector-main .receipt .cont-box > div.purchase-cont table tr:last-child td {
   padding-bottom: 12px;
 }
-.sector-main .receipt .purchase-cont table tr.item td:nth-child(3) {
+.sector-main .receipt .cont-box > div.purchase-cont table tr.item td:nth-child(3) {
   text-align: center;
 }
-.sector-main .receipt .purchase-cont table tr.item td:last-child {
+.sector-main .receipt .cont-box > div.purchase-cont table tr.item td:last-child {
   text-align: right;
 }
-.sector-main .receipt .tax-cont,
-.sector-main .receipt .price-cont {
+.sector-main .receipt .cont-box > div.tax-cont, .sector-main .receipt .cont-box > div.price-cont {
   padding: 4px 0;
   font-size: 14px;
   line-height: 19.6px;
@@ -1031,18 +1031,17 @@ header .inner .left {
   color: #888;
   border-bottom: 1px solid #dcdee0;
 }
-.sector-main .receipt .tax-cont td,
-.sector-main .receipt .price-cont td {
+.sector-main .receipt .cont-box > div.tax-cont td, .sector-main .receipt .cont-box > div.price-cont td {
   height: 22px;
   text-align: right;
 }
-.sector-main .receipt .total-cont {
-  padding: 4px 0;
+.sector-main .receipt .cont-box > div.total-cont {
+  padding: 12px 0 0;
 }
-.sector-main .receipt .total-cont tr {
+.sector-main .receipt .cont-box > div.total-cont tr {
   padding-bottom: 8px;
 }
-.sector-main .receipt .total-cont tr td {
+.sector-main .receipt .cont-box > div.total-cont tr td {
   font-size: 16px;
   line-height: 22.4px;
   letter-spacing: -0.32px;
@@ -1051,31 +1050,62 @@ header .inner .left {
   padding-top: 8px;
   height: 20px;
 }
-.sector-main .receipt .total-cont tr td:last-child {
+.sector-main .receipt .cont-box > div.total-cont tr td:last-child {
   text-align: right;
 }
-.sector-main .receipt .company-cont {
-  padding-top: 0 !important;
+.sector-main .receipt .cont-box > div.company-cont .barcode {
+  text-align: center;
+  height: 70px;
+}
+.sector-main .receipt .cont-box > div.company-cont .barcode img {
+  width: 245px;
+  height: 70px;
+}
+.sector-main .receipt .cont-box > div.company-cont .company-info {
   font-size: 12px;
   line-height: 16.8px;
   letter-spacing: -0.24px;
   font-weight: 400;
   color: #888;
+  padding-top: 12px;
 }
-.sector-main .receipt .company-cont .barcode {
-  text-align: center;
-}
-.sector-main .receipt .company-cont .barcode img {
-  width: 245px;
-  height: 70px;
-}
-.sector-main .receipt .company-cont .info-box {
+.sector-main .receipt .cont-box > div.company-cont .company-info .info-box {
   display: flex;
 }
-.sector-main .receipt .company-cont .info-box > ul {
+.sector-main .receipt .cont-box > div.company-cont .company-info .info-box > ul {
   width: 50%;
 }
+.sector-main .receipt .cont-box > div.company-cont .company-info .info-box > ul li {
+  padding: 2px 0;
+  height: 21px;
+  box-sizing: border-box;
+}
+.sector-main .receipt .cont-box > div.company-cont .company-info .info-box > ul li:nth-child(3) {
+  padding-top: 0;
+  padding-bottom: 4px;
+}
+.sector-main .receipt .cont-box > div.company-cont .company-info .info-box > ul li:last-child {
+  height: 17px;
+  padding: 0;
+}
+.sector-main .receipt .cont-box:before {
+  content: "";
+  display: inline-block;
+  margin: 0 auto;
+  width: 258px;
+  height: 100px;
+  background-image: url("/asset/image//common/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 73%;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.1;
+}
 .sector-main .receipt .btn-cont {
+  padding-top: 12px;
   padding-bottom: 40px;
 }
 .sector-main .receipt .btn-cont .btn {
@@ -1083,6 +1113,9 @@ header .inner .left {
   width: calc(100% - 40px);
   margin: 0 auto;
   margin-bottom: 12px;
+}
+.sector-main .receipt .btn-cont .btn.kakao {
+  margin-bottom: 0;
 }
 .sector-main .receipt .btn-cont.setting {
   padding-bottom: 22px;
