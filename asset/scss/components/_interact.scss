@@ -90,18 +90,23 @@ input[type="checkbox"] {
     text-align: center;
     @include fontStyle(16px, 19.09px, 400, $white);
   }
+
+  //하단 고정이 되어야하는 경우
   &.bottom {
     width: calc(100% - 40px);
     position: absolute;
     left: 20px;
     bottom: 0;
   }
+
+  // 배경색이 검은색인 버튼
   &.black {
     height: 51px;
     background-color: $gray500;
     bottom: 16px;
   }
 
+  // 배경색이 네이버 메인 컬러
   &.naver {
     background-color: $naver;
     a{
@@ -109,6 +114,7 @@ input[type="checkbox"] {
     }
   }
 
+  // 배경색이 카카오 메인컬러
   &.kakao {
     background-color: $kakao;
     a {
@@ -117,6 +123,7 @@ input[type="checkbox"] {
     }
   }
 
+  //배경색 기본 메인 컬러
   &.green {
     position: relative;
     margin: 66px 0 16px;
@@ -132,6 +139,7 @@ input[type="checkbox"] {
     }
   }
 
+  //외부 라인만 있는 버튼 스타일
   &.outline {
     height: 51px;
     border: 1px solid $gray500;
@@ -140,6 +148,7 @@ input[type="checkbox"] {
     }
   }
 
+  // 언더라인만 들어가는 스타일
   &.underline {
     a{
       color:$gray500;
@@ -148,6 +157,7 @@ input[type="checkbox"] {
     }
   }
 
+  // 비활성화 버튼
   &.disable {
     margin: 66px 0 16px;
     box-sizing: border-box;
@@ -158,10 +168,9 @@ input[type="checkbox"] {
       color:#ababab;
       font-weight: 700;
     }
-
-
   }
 
+  // 그라데이션 바탕
   &.gradation {
     margin: 13px 0 24px;
     box-sizing: border-box;
@@ -172,11 +181,6 @@ input[type="checkbox"] {
       gap: 8px;
     }
     
-    .sub-text {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-    }
   }
 }
 
@@ -194,6 +198,7 @@ input[type="checkbox"] {
   }
 }
 
+//버튼 여러개 + 하단에만 고정
 .btn-group {
   position: absolute;
   bottom: 32px;
@@ -343,6 +348,7 @@ button {
     @include fontStyle(16px, 19.09px, 400, $white);
   }
   
+   //검은 배경색
   &.black {
     width: 310px;
     @include backgroundImage(310px, 46px, "/common/bubble_black.png");
