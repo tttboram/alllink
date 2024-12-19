@@ -95,10 +95,17 @@ main {
   &.flex {
     .inner {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       flex-direction: column;
       .content {
-        height: calc(100vh - 123px);
+        height: calc(100vh - 250px);
+      }
+      .btn.bottom {
+        width: 100%;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 16px;
       }
     }
   }
