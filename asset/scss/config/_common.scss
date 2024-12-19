@@ -80,10 +80,10 @@ body {
 
 // 페이지 높이 값
 main {
-  height: calc(100vh - 56px);
+  height: calc(var(--vh, 1vh) * 100 - 56px);
 
   &.full {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     padding-bottom: 16px;
   }
 

@@ -322,10 +322,11 @@ body {
 }
 
 main {
-  height: calc(100vh - 56px);
+  height: calc(var(--vh, 1vh) * 100 - 56px);
 }
 main.full {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  padding-bottom: 16px;
 }
 main.fix {
   height: auto;
@@ -538,11 +539,6 @@ input[type=checkbox]:checked + label:after {
   height: 56px;
   box-sizing: border-box;
   gap: 8px;
-}
-.btn.gradation .sub-text {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
 }
 
 .button-sub {
