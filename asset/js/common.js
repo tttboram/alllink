@@ -106,12 +106,12 @@ function detectBrowser() {
 
   // 안드로이드 크롬
   if (/Android/i.test(userAgent) && /Chrome/i.test(userAgent)) {
-    $('.main .content').css('height','calc(100vh - 123px');
+    $('.main .content .btn.bottom').css('bottom','50px');
   }
 
   // 아이폰 사파리
   else if (/iPhone/i.test(userAgent) && /Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) {
-    ('.main .content').css('height','calc(100vh - 123px');
+    $('.main .content .btn.bottom').css('bottom','50px');
   }
 
 }
