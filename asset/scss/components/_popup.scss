@@ -38,12 +38,14 @@
     }
   }
 
+  // 네이버 자동설정 완료 팝업
   &.naver {
     .popup-title {
       background-color: $naver;
     }
   }
 
+   //카카오 자동설정 완료 팝업
   &.kakao {
     .popup-title {
       background-color: $kakao;
@@ -51,6 +53,7 @@
     }
   }
 
+   // 로그아웃, 서비스 탈퇴 시 팝업
   &.logout,
   &.signout {
     padding-top: 12px;
@@ -59,6 +62,7 @@
     }
   }
 
+  //메인 페이지 첫 팝업
   &.main {
     display: block;
     overflow: visible;
@@ -131,6 +135,8 @@
   }
 }
 
+
+// 딤
 .dimmed {
   display: none;
   position: absolute;

@@ -1,5 +1,7 @@
 @import url("/asset/scss/utils/_mixin.scss");
 
+
+// 폰트 설정
 body {
   position: relative;
   @include fontFace("Pretendard", 700, "normal", "Pretendard-Bold");
@@ -76,6 +78,7 @@ body {
   }
 }
 
+// 페이지 높이 값
 main {
   height: calc(100vh - 56px);
 
@@ -88,6 +91,8 @@ main {
   }
 }
 
+
+// .inner 넓이 및 스타일 분기
 .inner {
   width: calc(100% - 40px);
   height: 100%;
