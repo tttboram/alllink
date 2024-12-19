@@ -331,6 +331,14 @@ main.full {
 main.fix {
   height: auto;
 }
+main.fix .inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main.fix .inner .content {
+  height: calc(100vh - 123px);
+}
 
 .inner {
   width: calc(100% - 40px);

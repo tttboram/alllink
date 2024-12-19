@@ -91,6 +91,17 @@ main {
   &.fix {
     height: auto;
   }
+
+  &.fix {
+    .inner {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .content {
+        height: calc(100vh - 123px);
+      }
+    }
+  }
 }
 
 
