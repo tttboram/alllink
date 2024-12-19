@@ -6,6 +6,7 @@ $(function () {
   setting() ;
   settingCancel();
   settingChange();
+  detectBrowser();
 });
 
 
@@ -99,4 +100,19 @@ function setFullHeight() {
 
 window.addEventListener('resize', setFullHeight);
 setFullHeight();
+
+function detectBrowser() {
+  const userAgent = navigator.userAgent;
+
+  // 안드로이드 크롬
+  if (/Android/i.test(userAgent) && /Chrome/i.test(userAgent)) {
+    $('.main').css('height','calc(var(--vh, 1vh)*100 - 76px');
+  }
+
+  // 아이폰 사파리
+  else if (/iPhone/i.test(userAgent) && /Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) {
+    ('.main').css('height','calc(var(--vh, 1vh)*100 - 76px');
+  }
+
+}
 
