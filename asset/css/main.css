@@ -1482,4 +1482,22 @@ header .inner .left {
   background-color: transparent;
   border-radius: none;
   padding: 0;
+}
+.sector-loading {
+  height: 100vh;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.sector-loading .loading-area {
+  margin-bottom: 60px;
+}
+.sector-loading .loading-title {
+  text-align: center;
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -0.36px;
+  font-weight: 800;
+  color: #222;
 }/*# sourceMappingURL=main.css.map */

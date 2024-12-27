@@ -548,4 +548,25 @@
       }
     }
   }
+
+  //sector-loading 스플래쉬
+  &-loading {
+    height: 100vh;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .loading {
+      &-area {
+        margin-bottom: 60px;
+      }
+      &-title {
+        text-align: center;
+        @include fontStyle(18px, 25.2px, 800, $gray500);
+      }
+    }
+
+    
+  }
 }
