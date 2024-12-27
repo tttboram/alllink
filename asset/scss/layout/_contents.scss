@@ -551,7 +551,7 @@
 
   //sector-loading 스플래쉬
   &-loading {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     padding: 0 40px;
     display: flex;
     justify-content: center;
