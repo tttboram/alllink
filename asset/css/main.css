@@ -573,9 +573,8 @@ input[type=checkbox]:checked + label:after {
 }
 
 .btn-group {
-  position: absolute;
   bottom: 32px;
-  width: calc(100% - 40px);
+  width: 100%;
 }
 
 button.change {
@@ -1020,6 +1019,12 @@ header .inner .left {
   padding-bottom: 12px;
   height: 20px;
 }
+.sector-main .receipt .cont-box > div.purchase-cont table tr.title td:nth-child(2) {
+  text-align: left;
+}
+.sector-main .receipt .cont-box > div.purchase-cont table tr.title td:last-child {
+  text-align: right;
+}
 .sector-main .receipt .cont-box > div.purchase-cont table tr td {
   padding-bottom: 4px;
   vertical-align: middle;
@@ -1374,16 +1379,21 @@ header .inner .left {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.sector-setting > div {
+.sector-setting {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.sector-setting .content-group > div {
   background-color: #fff;
   border-radius: 12px;
   padding: 15px 20px;
   margin-bottom: 13px;
 }
-.sector-setting > div:last-child {
-  margin-bottom: 0;
+.sector-setting .content-group > div:last-child {
+  margin-bottom: 105px;
 }
-.sector-setting > div .title-area {
+.sector-setting .content-group > div .title-area {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1396,44 +1406,44 @@ header .inner .left {
   color: #ababab;
   border-bottom: 1px solid #dcdee0;
 }
-.sector-setting > div .title-area .title {
+.sector-setting .content-group > div .title-area .title {
   margin-left: 4px;
 }
-.sector-setting > div.auto-box {
+.sector-setting .content-group > div.auto-box {
   padding-bottom: 4px;
 }
-.sector-setting > div.auto-box .state-area .state {
+.sector-setting .content-group > div.auto-box .state-area .state {
   margin-top: 12px;
 }
-.sector-setting > div.auto-box .state-area .state .kakao {
+.sector-setting .content-group > div.auto-box .state-area .state .kakao {
   margin-bottom: 16px;
 }
-.sector-setting > div.auto-box .setting-area div:first-child {
+.sector-setting .content-group > div.auto-box .setting-area div:first-child {
   padding-top: 0;
   margin-bottom: 12px;
   border-bottom: 1px solid #eee;
 }
-.sector-setting > div.auto-box .setting-area div:first-child .ing {
+.sector-setting .content-group > div.auto-box .setting-area div:first-child .ing {
   padding: 16px 0 4px;
 }
-.sector-setting > div.auto-box .setting-area div:last-child {
+.sector-setting .content-group > div.auto-box .setting-area div:last-child {
   margin-top: 12px;
 }
-.sector-setting > div.auto-box .setting-area div:last-child .ing.kakao {
+.sector-setting .content-group > div.auto-box .setting-area div:last-child .ing.kakao {
   border-top: none;
 }
-.sector-setting > div.auto-box .setting-area .btn.kakao {
+.sector-setting .content-group > div.auto-box .setting-area .btn.kakao {
   margin-bottom: 25px;
 }
-.sector-setting > div:first-child .title-area {
+.sector-setting .content-group > div:first-child .title-area {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.sector-setting > div.user-info-box .info-area table {
+.sector-setting .content-group > div.user-info-box .info-area table {
   width: 100%;
 }
-.sector-setting > div.user-info-box .info-area table tr {
+.sector-setting .content-group > div.user-info-box .info-area table tr {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1441,14 +1451,14 @@ header .inner .left {
   padding: 4px 0;
   box-sizing: border-box;
 }
-.sector-setting > div.user-info-box .info-area table tr td {
+.sector-setting .content-group > div.user-info-box .info-area table tr td {
   font-size: 16px;
   line-height: 19.09px;
   letter-spacing: -0.32px;
   font-weight: 400;
   color: #222;
 }
-.sector-setting > div.condition-box li {
+.sector-setting .content-group > div.condition-box li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1461,7 +1471,7 @@ header .inner .left {
   font-weight: 400;
   color: #222;
 }
-.sector-setting > div.btn-group {
+.sector-setting .content-group > div.btn-group {
   background-color: transparent;
   border-radius: none;
   padding: 0;

@@ -200,9 +200,9 @@ input[type="checkbox"] {
 
 //버튼 여러개 + 하단에만 고정
 .btn-group {
-  position: absolute;
+
   bottom: 32px;
-  width: calc(100% - 40px);
+  width: 100%;
 }
 
 //sub-button

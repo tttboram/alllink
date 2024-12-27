@@ -69,6 +69,13 @@
                     text-align: center;
                     padding-bottom: 12px;
                     height: 20px;
+
+                    &:nth-child(2) {
+                      text-align: left;
+                    }
+                    &:last-child {
+                      text-align: right;
+                    }
                   }
                 }
     
@@ -420,109 +427,114 @@
 
   // sector-setting 011 설정
   &-setting {
-    > div {
-      background-color: $white;
-      border-radius: 12px;
-      padding: 15px 20px;
-      margin-bottom: 13px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      .title-area {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 12px;
-        padding-bottom: 12px;
-        @include fontStyle(16px, 19.6px, 400, $gray300);
-        border-bottom : 1px solid $gray100;
-        .title {
-          margin-left: 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .content-group {
+      > div {
+        background-color: $white;
+        border-radius: 12px;
+        padding: 15px 20px;
+        margin-bottom: 13px;
+        &:last-child {
+          margin-bottom: 105px
         }
-      }
-
-      &.auto-box {
-        padding-bottom: 4px;
-        .state-area {
-          .state {
-            margin-top: 12px;
-            .kakao {
-              margin-bottom: 16px;
+  
+        .title-area {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 12px;
+          padding-bottom: 12px;
+          @include fontStyle(16px, 19.6px, 400, $gray300);
+          border-bottom : 1px solid $gray100;
+          .title {
+            margin-left: 4px;
+          }
+        }
+  
+        &.auto-box {
+          padding-bottom: 4px;
+          .state-area {
+            .state {
+              margin-top: 12px;
+              .kakao {
+                margin-bottom: 16px;
+              }
+            }
+          }
+          .setting-area {
+            div {
+              &:first-child{
+                padding-top: 0;
+                margin-bottom: 12px;
+                border-bottom: 1px solid #eee;
+                .ing{
+                  padding: 16px 0 4px;
+                }
+              }
+              &:last-child {
+                margin-top: 12px;
+                .ing {
+                
+                  &.kakao {
+                    border-top: none;
+                  }
+                }
+              }
+            }
+            .btn {
+              &.kakao {
+                margin-bottom: 25px;
+              }
             }
           }
         }
-        .setting-area {
-          div {
-            &:first-child{
-              padding-top: 0;
-              margin-bottom: 12px;
-              border-bottom: 1px solid #eee;
-              .ing{
-                padding: 16px 0 4px;
-              }
-            }
-            &:last-child {
-              margin-top: 12px;
-              .ing {
-              
-                &.kakao {
-                  border-top: none;
+        &:first-child {
+          .title-area {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+   
+  
+        &.user-info-box {
+          .info-area {
+            table {
+              width: 100%;
+              tr{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 30px;
+                padding: 4px 0;
+                box-sizing: border-box;
+                td {
+                  @include fontStyle(16px, 19.09px, 400, $gray500);
                 }
               }
             }
           }
-          .btn {
-            &.kakao {
-              margin-bottom: 25px;
-            }
+        }
+  
+        &.condition-box {
+          li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            padding: 4px 0;
+            box-sizing: border-box;
+            @include fontStyle(16px, 19.09px, 400, $gray500);
           }
         }
-      }
-      &:first-child {
-        .title-area {
-          border-bottom: none;
-          margin-bottom: 0;
-          padding-bottom: 0;
+  
+        &.btn-group {
+          background-color: transparent;
+          border-radius: none;
+          padding: 0;
         }
-      }
- 
-
-      &.user-info-box {
-        .info-area {
-          table {
-            width: 100%;
-            tr{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              height: 30px;
-              padding: 4px 0;
-              box-sizing: border-box;
-              td {
-                @include fontStyle(16px, 19.09px, 400, $gray500);
-              }
-            }
-          }
-        }
-      }
-
-      &.condition-box {
-        li {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          height: 30px;
-          padding: 4px 0;
-          box-sizing: border-box;
-          @include fontStyle(16px, 19.09px, 400, $gray500);
-        }
-      }
-
-      &.btn-group {
-        background-color: transparent;
-        border-radius: none;
-        padding: 0;
       }
     }
   }
