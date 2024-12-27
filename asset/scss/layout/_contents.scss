@@ -156,9 +156,19 @@
                       padding-top: 0;
                       padding-bottom: 4px;
                     }
+                
+                  }
+                }
+
+                &.second {
+                  display: block;
+
+                  p {
+                   margin-bottom: 4px;
+                   box-sizing: border-box;
+                    height: 17px;
                     &:last-child {
-                      height: 17px;
-                      padding: 0;
+                      margin-bottom: 0;
                     }
                   }
                 }

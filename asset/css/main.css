@@ -1100,9 +1100,16 @@ header .inner .left {
   padding-top: 0;
   padding-bottom: 4px;
 }
-.sector-main .receipt .cont-box > div.company-cont .company-info .info-box > ul li:last-child {
+.sector-main .receipt .cont-box > div.company-cont .company-info .info-box.second {
+  display: block;
+}
+.sector-main .receipt .cont-box > div.company-cont .company-info .info-box.second p {
+  margin-bottom: 4px;
+  box-sizing: border-box;
   height: 17px;
-  padding: 0;
+}
+.sector-main .receipt .cont-box > div.company-cont .company-info .info-box.second p:last-child {
+  margin-bottom: 0;
 }
 .sector-main .receipt .cont-box:before {
   content: "";
