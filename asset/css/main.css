@@ -1489,8 +1489,10 @@ header .inner .left {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  box-sizing: border-box;
 }
 .sector-loading .loading-area {
+  box-sizing: border-box;
   margin-bottom: 60px;
 }
 .sector-loading .loading-title {

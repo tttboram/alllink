@@ -556,9 +556,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-
+    box-sizing: border-box;
     .loading {
       &-area {
+        box-sizing: border-box;
         margin-bottom: 60px;
       }
       &-title {
