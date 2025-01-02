@@ -1,4 +1,6 @@
-$(function () {
+$(function () { 
+  menuToggle();
+  menuListColor();
   popupPosition();
   popupEvent();
   popupClose();
@@ -6,10 +8,29 @@ $(function () {
   setting() ;
   settingCancel();
   settingChange();
-
+ 
 });
 
+ //헤더 메뉴리스트 열기,닫기
+function menuToggle() {
+  $(document).on('click','*',function(e){
+    if(!$(this).hasClass('icon more')){
+      $('.menu-list').css('display','none');
+    }else {
+      e.stopPropagation()
+      $('.menu-list').css('display','block');
+    }
+  })
+}
 
+function menuListColor() {
+  $('.menu-item li').on('mouseenter touchstart',function (){
+    $(this).addClass('on');
+  });
+  $('.menu-item li').on('mouseleave touchend',function (){
+    $('.menu-item li').removeClass('on');
+  });
+}
 
 //팝업창 띄우기
 function popupPosition() {

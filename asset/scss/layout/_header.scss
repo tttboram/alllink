@@ -4,6 +4,7 @@ header {
   box-sizing: border-box;
 
   .inner {
+    position: relative;
     padding: 16px 0;
     display: flex;
     justify-content:space-between;
@@ -14,6 +15,27 @@ header {
       display: flex;
       align-items: center;
       gap: 4px;
+    }
+
+    .menu-list {
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fff;
+      width: 144px;
+      box-sizing: border-box;
+
+      li {
+        padding: 10px 20px;
+        @include fontStyle(16px, 19.09px, 400, $gray500);
+
+        &.on{
+          @include fontStyle(16px, 19.09px, 700, $primary);
+        }
+      }
     }
   }
 }

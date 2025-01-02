@@ -919,6 +919,7 @@ header {
   box-sizing: border-box;
 }
 header .inner {
+  position: relative;
   padding: 16px 0;
   display: flex;
   justify-content: space-between;
@@ -929,6 +930,32 @@ header .inner .left {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+header .inner .menu-list {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  width: 144px;
+  box-sizing: border-box;
+}
+header .inner .menu-list li {
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 19.09px;
+  letter-spacing: -0.32px;
+  font-weight: 400;
+  color: #222;
+}
+header .inner .menu-list li.on {
+  font-size: 16px;
+  line-height: 19.09px;
+  letter-spacing: -0.32px;
+  font-weight: 700;
+  color: #017F69;
 }
 
 .sector-main {
