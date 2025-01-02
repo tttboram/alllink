@@ -82,7 +82,7 @@ function settingChange() {
     $('.setting-area').toggleClass('on');
     if($(this).is('button')){
       if($('.setting-area').hasClass('on')){
-        $(this).text('취소');
+        $(this).text('완료');
       }else {
         $(this).text('변경');
       }
