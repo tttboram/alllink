@@ -949,6 +949,7 @@ header .inner .menu-list li {
   letter-spacing: -0.32px;
   font-weight: 400;
   color: #222;
+  touch-action: manipulation;
 }
 header .inner .menu-list li.on {
   font-size: 16px;

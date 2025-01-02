@@ -31,8 +31,9 @@ header {
       li {
         padding: 10px 20px;
         @include fontStyle(16px, 19.09px, 400, $gray500);
+        touch-action: manipulation; 
 
-        &.on{
+        &.on {
           @include fontStyle(16px, 19.09px, 700, $primary);
         }
       }

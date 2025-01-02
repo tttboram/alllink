@@ -24,11 +24,22 @@ function menuToggle() {
 }
 
 function menuListColor() {
-  $('.menu-item li').on('mouseenter touchstart',function (){
+  // 모바일 터치 이벤트 처리
+  $('.menu-list li').on('touchstart', function() {
     $(this).addClass('on');
   });
-  $('.menu-item li').on('mouseleave touchend',function (){
-    $('.menu-item li').removeClass('on');
+  
+  $('.menu-list li').on('touchend', function() {
+    $(this).removeClass('on');
+  });
+  
+  // 데스크탑 마우스 이벤트 처리
+  $('.menu-list li').on('mouseenter', function() {
+    $(this).addClass('on');
+  });
+  
+  $('.menu-list li').on('mouseleave', function() {
+    $(this).removeClass('on');
   });
 }
 
