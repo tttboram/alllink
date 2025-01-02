@@ -25,7 +25,7 @@ function menuToggle() {
 
 function menuListColor() {
   // 모바일 터치 이벤트 처리
-  $('.menu-list li').on('touchstart', function() {
+  $('.menu-list li').on('touchstart click', function() {
     $(this).addClass('on');
   });
   
