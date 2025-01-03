@@ -15,6 +15,11 @@ header {
       display: flex;
       align-items: center;
       gap: 4px;
+      .logo {
+        width: 23px;
+        height: 22px;
+        margin-right: 7.5px;
+      }
     }
 
     .menu-list {
