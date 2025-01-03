@@ -112,6 +112,9 @@
             td {
               height: 22px;
               text-align: right;
+              &:first-child {
+              padding-right: 10px;
+              }
             }
           }
     
@@ -567,7 +570,86 @@
         @include fontStyle(18px, 25.2px, 800, $gray500);
       }
     }
+  }
 
+  &-login {
+    padding-top: 125px;
+
+    .title {
+      text-align: center;
+      margin-bottom: 48px;
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include fontStyle(28px, 39.2px,700,$gray500);
+        margin-bottom: 27px;
+        .icon {
+          &.logo {
+            width: 48px;
+            height: 45px;
+            margin-right: 4px;
+          }
+        }
+      }
+      .sub-text {
+        @include fontStyle(20px, 28px,500,$gray500);
+      }
+    }
+
+    .login-box {
+      width: 100%;
+      background-color: $white;
+      border-radius: 12px;
+      padding: 48px 16px;
+      text-align: center;
+      box-sizing: border-box;
+
+      .icon-box {
+        padding-bottom: 16px;
+        .login-cont {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 18px;
+  
+          a{
+            display: inline-block;
+            padding: 7.5px;
+            border-radius: 4px;
+          }
+        }
+
+        .continue {
+          a {
+            @include fontStyle(16px, 19.09px, 400, $gray500);
+          text-decoration: underline;
+          }
+        }
+      }
+
+      .line {
+        width: 100%;
+       margin: 0;
+        &:before {
+          left: -25px;
+        }
+        &:after {
+          right: -25px;
+        }
+      }
+    }
     
+    .terms-box {
+      padding-top: 16px;
+      p {
+        @include fontStyle(14px, 19.6px, 400, #888);
+
+        a{
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }

@@ -67,6 +67,9 @@ body {
   &.cancel{
     @include backgroundImage(24px, 24px, "icon/cancel.svg");
   }
+  &.logo{
+    @include backgroundImage(24px, 24px, "icon/logo.svg");
+  }
   &.close {
     @include backgroundImage(24px, 24px, "icon/close.svg");
   }
@@ -75,6 +78,12 @@ body {
   }
   &.coin {
     @include backgroundImage(56px, 53px, "icon/coin.svg");
+  }
+  &.kakao {
+    @include backgroundImage(25px, 25px, "icon/kakao.svg");
+  }
+  &.naver {
+    @include backgroundImage(25px, 25px, "icon/naver.svg");
   }
 }
 

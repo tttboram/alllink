@@ -55,7 +55,8 @@
 
    // 로그아웃, 서비스 탈퇴 시 팝업
   &.logout,
-  &.signout {
+  &.signout,
+  &.one-btn {
     padding-top: 12px;
     .popup-cont {
       padding-bottom: 28px;
@@ -131,7 +132,29 @@
   .popup-btn {
     padding: 16px 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
     @include fontStyle(18px, 21.48px, 600, #000);
+
+    &.group {
+      span {
+        width: 50%;
+        &:first-child {
+          position: relative;
+          color: #ff0000;
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            width: 1px;
+            height: 21px;
+            background-color: $gray100;
+          }
+        }
+      }
+    }
   }
 }
 
