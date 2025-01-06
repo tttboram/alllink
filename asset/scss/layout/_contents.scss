@@ -316,6 +316,17 @@
     }
   }
 
+  //sector-terms 008-1
+  &-terms {
+    height: calc((var(--vh, 1vh) * 100 ) - 56px) !important;
+    overflow-y: scroll;
+    p {
+      @include fontStyle(14px, 19.6px, 400, $gray500);
+      margin-bottom: 20px;
+    }
+
+  }
+
   // sector-receipt 010 내역리스트
   &-receipt {
     .setting-box {
@@ -572,6 +583,8 @@
     }
   }
 
+
+  //sector-login 로그인화면
   &-login {
     padding-top: 125px;
 

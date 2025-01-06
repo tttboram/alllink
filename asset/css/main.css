@@ -585,6 +585,16 @@ input[type=checkbox]:checked + label:after {
 .btn.pdf a {
   gap: 8px;
 }
+.btn.terms {
+  padding: 24px 0 16px;
+  background-color: #ededed;
+  border-radius: 0;
+}
+.btn.terms a {
+  height: 51px;
+  background-color: #888;
+  border-radius: 40px;
+}
 
 .button-sub {
   display: inline-block;
@@ -1326,6 +1336,18 @@ header .inner .menu-list li.on {
 }
 .sector-agree .btn {
   bottom: 16px;
+}
+.sector-terms {
+  height: calc(var(--vh, 1vh) * 100 - 56px) !important;
+  overflow-y: scroll;
+}
+.sector-terms p {
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 20px;
 }
 .sector-receipt .setting-box {
   padding: 24px 20px;

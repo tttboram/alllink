@@ -8,8 +8,10 @@ $(function () {
   setting();
   settingCancel();
   settingChange();
+  scrollEvent();
+  backBtn();
 
- //체크박스 체크 여부에 따라 버튼 컬러 변경
+  //체크박스 체크 여부에 따라 버튼 컬러 변경
   var checkBtn = $('.checkbox');
   function checkComplete() {
     if (checkBtn.length === checkBtn.filter(':checked').length) {
@@ -18,7 +20,7 @@ $(function () {
     }
   }
 
-  checkBtn.on('change', checkComplete)
+  checkBtn.on('change', checkComplete);
 });
 
 //헤더 메뉴리스트 열기,닫기
@@ -145,3 +147,20 @@ window.addEventListener('resize', setFullHeight);
 setFullHeight();
 
 
+//이용약관 스크롤 끝나면 버튼 컬러 바뀌는 기능
+function scrollEvent() {
+  $('.sector-terms').scroll(function () {
+    if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+      $('.btn.black a').css('backgroundColor', "#222");
+    }else {
+      $('.btn.black a').css('backgroundColor', "#888");
+    }
+  })
+}
+
+//뒤로가기 버튼
+function backBtn(){
+  $('.back').on('click',function(){
+    window.history.back();
+  });
+}

@@ -104,6 +104,7 @@ input[type="checkbox"] {
     height: 51px;
     background-color: $gray400;
     bottom: 16px;
+  
   }
 
   // 배경색이 네이버 메인 컬러
@@ -187,6 +188,17 @@ input[type="checkbox"] {
     background-color: $primary;
     a{
       gap: 8px;
+    }
+  }
+
+  &.terms {
+    padding: 24px 0 16px;
+    background-color: #ededed;
+    border-radius: 0;
+    a {
+      height: 51px;
+      background-color: $gray400 ;
+      border-radius: 40px;
     }
   }
 }
