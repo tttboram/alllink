@@ -1338,7 +1338,7 @@ header .inner .menu-list li.on {
   bottom: 16px;
 }
 .sector-terms {
-  height: calc(var(--vh, 1vh) * 100 - 56px) !important;
+  height: calc(var(--vh, 1vh) * 100 - 91px) !important;
   overflow-y: scroll;
 }
 .sector-terms p {

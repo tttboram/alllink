@@ -318,7 +318,7 @@
 
   //sector-terms 008-1
   &-terms {
-    height: calc((var(--vh, 1vh) * 100 ) - 56px) !important;
+    height: calc((var(--vh, 1vh) * 100 ) - 91px) !important;
     overflow-y: scroll;
     p {
       @include fontStyle(14px, 19.6px, 400, $gray500);
