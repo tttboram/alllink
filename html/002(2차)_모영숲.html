@@ -20,15 +20,16 @@
       </div>
     </header>
     <main class="fix">
-      <div class="inner">
+      <!-- 2차 추가 : 클래스 wide 추가 -->
+      <div class="inner wide">
         <div class="content sector-main">
           <div class="banner">
             <a href="#" class="banner-img"> </a>
           </div>
+          <!-- 2차 추가 : 제주 공항 면세점인 경우 클래스 jeju 추가 -->
           <div class="receipt">
             <div class="receipt-cont">
               <div class="logo">
-                <img src="../asset/image/common/logo.png" alt="" />
               </div>
               <div class="price">
                 <span class="sub-title">총 결제금액</span>
@@ -39,6 +40,7 @@
               <div class="line"></div>
             </div>
 
+           
             <div class="cont-box">
               <div class="purchase-cont">
                 <table>
@@ -125,7 +127,11 @@
               <div class="company-cont">
                 <div class="barcode">
                   <img src="../asset/image/common/barcode.png" alt="" />
+                  
                 </div>
+                <!-- 2차 추가 : 바코드 넘버 -->
+                <p class="barcode-num">111111111111111111111111111111</p>
+                <!-- 2차 추가 : //바코드 넘버 -->
                 <div class="company-info">
                   <p class="addr">
                     전북특별자치도 전주시 완산구 태조로 26-40 (풍남동3가) 오짱
@@ -164,9 +170,16 @@
                 </div>
               </div>
             </div>
-            <div class="line"></div>
-            <!-- default : 설정한번도 안한 경우 -->
-            <div class="btn-cont">
+
+            <!--  2차 추가 : 모영숲 올라오면 line display:none; -->
+            <div class="line" style="display: none;"></div>
+             <!--  2차 추가 : 모영숲 올라오면 btn-cont display:none; -->
+            <div class="btn-cont" style="display: none;">
+              <p class="btn-text">
+                모바일 전자 영수증을 안전하게 보관하고,<br>
+                탄소중립포인트를 적립하시려면<br>
+                먼저 전자문서로 저장하셔야 합니다.
+              </p>
               <div class="btn naver">
                 <a href="">
                   <span class="icon download"></span>
@@ -183,8 +196,95 @@
             </div>
           </div>
         </div>
-        <!-- default -->
-        <div class="btn green">
+
+        <!-- 2차 추가 : 모영숲 올라온 페이지에서 display:none; 클래스 default : 모영숲 아래 있을 때 보여지는 녹색버튼영역-->
+        <div class="btn green default" style="display: none;">
+          <div class="bubble">
+            <span>탄소중립실천포인트 적립하세요.</span>
+          </div>
+          <a href="">
+            <span class="icon plus"></span>
+            <span><span class=point>100</span>원 적립예정</span>
+          </a>
+        </div>
+        <!-- //2차 추가 :  모영숲 올라온 페이지에서 display:none; 클래스 default : 모영숲 아래 있을 때 보여지는 녹색버튼영역-->
+        <!-- 2차 추가 : 모영숲 -->
+        <div class="reciept-wood">
+          <div class="title">
+            <div class="wood-title">모영숲 만들기</div>
+            <a href="" class="icon tooltip"><img src="" alt=""></a>
+          </div>
+          <div class="wood-text">
+            연간 종이 영수증으로 사라지는 나무가<br>30만 그루입니다. 모바일 영수증 발급으로<br>나무를 지키고 숲을 만들어 가요.
+          </div>
+          <div class="wood-count">
+            <p>나의 모영 나무 <strong><span>0</span>그루</strong></p>
+          </div>
+          <div class="wood-state">
+            <ul>
+              <li class="seed">
+                <img src="/asset/image/common/seed.png" alt="">
+              </li>
+              <li class="sprout">
+                <img src="/asset/image/common/sprout.png" alt="">
+              </li>
+              <li class="sampling">
+                <img src="/asset/image/common/sample.png" alt="">
+              </li>
+              <li class="tree">
+                <img src="/asset/image/common/tree.png" alt="">
+              </li>
+            </ul>
+            <p class="wood-total">
+              함께 심은 모영나무 <strong><span>00000</span>그루</strong>
+            </p>
+          </div>
+        </div>
+        <!-- //2차 추가 : 모영숲 -->
+        <!-- 2차 추가 : 기본페이지에서 display:none; 클래스 wood : 모영숲 아래 있을 때 보여지는 녹색버튼영역-->
+        <div class="btn-cont setting wood">
+          <!-- 자동저장 설정한 경우 btn-cont 안에 auto-box 추가 -->
+          <div class="auto-box">
+            <div class="default">
+              <div class="title-area">
+                <span class="title">자동저장 설정 변경</span>
+                <button><span class="icon bottom-arrow change"></span></button>
+              </div>
+            </div>
+            <div class="setting-area on">
+              <div class="naver-btn">
+                <div class="btn naver">
+                  <!-- 네이버 저장 설정 전 -->
+                  <a href="#">
+                    <span class="icon download"></span>
+                    <span>네이버 전자문서로 저장</span>
+                  </a>
+                </div>
+                <!-- 네이버 저장 설정 후 -->
+                <div class="naver ing">
+                  <span>네이버 전자문서로 자동저장 중</span
+                  ><button class="cancel">해지</button>
+                </div>
+              </div>
+              <div class="kakao-btn">
+                <!-- 카카오 저장 설정 전 -->
+                <div class="btn kakao">
+                  <a href="#">
+                    <span class="icon download-black"></span>
+                    <span>카카오 전자문서로 저장</span>
+                  </a>
+                </div>
+                <!-- 카카오 저장 설정 후 -->
+                <div class="kakao ing">
+                  <span>카카오 전자문서로 자동저장 중</span
+                  ><button class="cancel">해지</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2차 추가 : 기본페이지에서 display:none; 클래스 wood : 모영숲 아래 있을 때 보여지는 녹색버튼영역-->
+        <div class="btn green default">
           <div class="bubble">
             <span>탄소중립실천포인트 적립하세요.</span>
           </div>
@@ -195,10 +295,10 @@
         </div>
       </div>
     </main>
-    <div class="dimmed" style="display: block; background: rgba(0,0,0,.5);"></div>
+    <!-- <div class="dimmed" style="display: block; background: rgba(0,0,0,.5);"></div> -->
 
     <!-- 메인 팝업 -->
-    <div class="popup main">
+    <!-- <div class="popup main">
       <div class="popup-cont">
         <a href="#" class="icon close"></a>
         <div class="title">
@@ -239,7 +339,7 @@
           <span class="check-text">다시 보지 않기</span>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </body>
   <script

@@ -127,10 +127,12 @@ input[type="checkbox"] {
   //배경색 기본 메인 컬러
   &.green {
     position: relative;
-    margin: 66px 0 16px;
+    margin: 66px auto 16px;
     border: 1px solid $primary;
     background-color: #017f691a;
+    width: calc(100% - 40px);
     a {
+      
       color: $primary;
       font-weight: 700;
       display: flex;
@@ -307,7 +309,8 @@ button {
     .ing {
       display: none;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 12px;
       background-color: transparent;
       margin-bottom: 12px;
       @include fontStyle(16px, 19.09px, 700, $gray500);

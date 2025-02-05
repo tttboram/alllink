@@ -98,8 +98,10 @@ function setting() {
 
     if ($(this).hasClass('naver')) {
       $('.state .naver').css('display', 'flex');
+      $('.kakao-btn').css('display', 'none');
     } else {
       $('.state .kakao').css('display', 'flex');
+      $('.naver-btn').css('display', 'none');
     }
   })
 }

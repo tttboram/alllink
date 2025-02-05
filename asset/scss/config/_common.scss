@@ -85,6 +85,9 @@ body {
   &.naver {
     @include backgroundImage(25px, 25px, "icon/naver.svg");
   }
+  &.tooltip {
+    @include backgroundImage(22.67px, 22.67px, "icon/tool_tip.png");
+  }
 }
 
 // 페이지 높이 값
@@ -130,6 +133,7 @@ main {
   //.inner-wide
   &.wide {
     width: 100%;
+    padding: 0;
   }
 
   &.receipt {
@@ -169,5 +173,79 @@ main {
 
   &:after {
     right: -30px;
+  }
+}
+
+
+// 모영숲
+.reciept-wood {
+  margin-top: 20px;
+  text-align: center;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 8px;
+    .wood-title {
+      @include fontStyle(24px,33.6px, 700, #222);
+    }
+    .icon.tootip {
+      width: 37px;
+      height: 37px;
+      box-sizing: border-box;
+      padding: 5.67px;
+    }
+  }
+  .wood-text {
+    padding: 4px 0;
+    @include fontStyle(16px, 22.4px, 400, #222);
+    margin-bottom: 8px;
+  }
+  .wood-count {
+    width: calc(100% - 40px);
+    margin: 0 auto 8px;
+    border-radius: 16px;
+    background-color: $white;
+    padding: 8px 0;
+    @include fontStyle(16px, 22.4px, 400,#222);
+    strong {
+      font-weight: 700;
+    }
+  }
+  
+  .wood-state {
+    width: 100%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    background-color: $white;
+    margin-bottom: 24px;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-bottom:1px dashed $gray100;
+      padding-bottom: 12px;
+      li {
+        width: 57px;
+        &:last-child {
+          width: 85px;
+          margin-left: 15px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .wood-total {
+      margin-top: 12px;
+      @include fontStyle(16px, 22.4px, 400,#222);
+    strong {
+      font-weight: 700;
+    }
+    }
   }
 }

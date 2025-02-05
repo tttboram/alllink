@@ -1,7 +1,93 @@
+// 자동설정 영역 및 버튼 컨텐츠영역 추가
+.auto-box {
+  .title-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:8px;
+    .title {
+      @include fontStyle(16px, 19.09px,700, $gray500);
+    }
+    button {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      span {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .setting-area.on {
+    margin-top: 16px;
+    border-top: 1px solid #eee;
+    padding-top: 0;
+    padding-bottom: 2px;
+    .naver-btn {
+      padding-top: 12px;
+      margin-bottom: 0;
+      .naver {
+        margin-bottom: 12px;
+      }
+    }
+    .kakao-btn {
+      margin-top: 0;
+    }
+
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+  .ing {
+ 
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    &.kakao {
+      border-top: 0;
+    }
+  }
+}
+
+//모영숲 올라올 때
+.wood {
+  .auto-box {
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    background-color: $white;
+    border-radius: 12px;
+    padding: 18.5px 0;
+  }
+  .setting-area {
+    margin: 0 auto;
+    width: calc(100% - 40px);
+
+    .ing {
+      &.naver {
+        padding: 0;
+        margin-bottom: 0;
+      }
+      &.kakao {
+        padding-bottom: 0;
+        border-top: none;
+      }
+    }
+    &.on {
+      .naver-btn{
+        .naver {
+         &.ing {
+          margin-bottom: 0;
+         }
+        }
+      }
+    }
+  }
+  margin-bottom: 24px;
+}
 .sector {
   //sector-main 002 메인페이지
   &-main {
-    padding-top: 12px;
+    padding: 12px 20px;
     .banner {
       width: 100%;
       height: 115px;
@@ -19,18 +105,17 @@
 
       .receipt-cont {
         position: relative;
-        padding-top: 0;
+        padding-top: 10px;
 
         .logo {
-          padding: 10px 0;
+          padding: 10px 24px;
           text-align: center;
-          img {
-            display: inline-block;
-            padding: 9.6px 25.5px;
-            width: 203px;
-            height: 40px;
-            box-sizing: border-box;
-          }
+          margin: 0 auto;
+          width: 203px;
+          height: 40px;
+          box-sizing: border-box;
+          @include backgroundImage(155px, 30px, 'common/logo.png', contain);
+          background-position: center;
         }
 
         .price {
@@ -143,6 +228,10 @@
                 height: 70px;
               }
             }
+            .barcode-num {
+              text-align: center;
+              @include fontStyle(12px, 22.4px, 400, #222);
+            }
             .company-info {
               @include fontStyle(12px, 16.8px, 400, $gray400);
               padding-top: 12px;
@@ -192,11 +281,20 @@
           transform: translateX(-50%);
           opacity: .1;
         }
+
+       
       }
 
       .btn-cont {
+        position: relative;
+        z-index: 2;
         padding-top: 12px;
         padding-bottom: 40px;
+        .btn-text {
+          text-align: center;
+          @include fontStyle(14px, 19.6px, 400, #222);
+          margin-bottom: 12px;
+        }
         .btn {
           position: relative;
           width: calc(100% - 40px);
@@ -213,55 +311,54 @@
         }
       }
 
-      .auto-box {
-        .title-area {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap:8px;
-          .title {
-            @include fontStyle(16px, 19.09px,700, $gray500);
-          }
-          button {
-            width: 24px;
-            height: 24px;
-            padding: 0;
-            span {
-              width: 100%;
-              height: 100%;
-            }
-          }
-        }
 
-        .setting-area.on {
-          margin-top: 16px;
-          border-top: 1px solid #eee;
-          padding-top: 0;
-          padding-bottom: 2px;
-          .naver-btn {
-            padding-top: 12px;
-            margin-bottom: 0;
-            .naver {
-              margin-bottom: 12px;
-            }
-          }
-          .kakao-btn {
-            margin-top: 0;
-          }
-
-          .btn {
-            margin-bottom: 0;
-          }
-        }
-        .ing {
-          width: calc(100% - 40px);
+  
+       // 제주 공항 면세점인 경우 클래스 jeju 추가
+       &.jeju {
+        position: relative;
+        &:before,
+        &:after {
+          content: '';
+          display: inline-block;
           margin: 0 auto;
-          &.kakao {
-            border-top: 0;
+          @include backgroundImage(20px ,99%,'common/logo_hori.png', auto);
+          background-repeat: no-repeat space;
+          background-position: 0 0;
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 20spx;
+          height: calc(100% - 20px);
+          opacity: .1;
+          z-index: 0;
+        }
+
+        &:after {
+          left: auto;
+          right: 20px;
+        }
+
+        .logo {
+          padding: 10px 24px;
+          text-align: center;
+          margin: 0 auto;
+          width: 203px;
+          height: 40px;
+          box-sizing: border-box;
+          @include backgroundImage(155px, 30px, 'common/logo_jeju.png', contain);
+          background-position: center;
+        }
+
+        .cont-box {
+          &:before {
+            display: none;
           }
+
+         
         }
       }
     }
+
   }
 
   // sector-agree 008 약관동의
