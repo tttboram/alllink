@@ -762,4 +762,57 @@
       }
     }
   }
+
+  //sector-benefit 
+  &-benefit {
+    .main-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @include fontStyle(20px, 28px, 700,#222);
+      margin-bottom: 24px;
+
+      .icon.tooltip {
+        width: 16px;
+        height: 16px;
+        padding: 4px;
+        box-sizing: border-box;
+      }
+    }
+
+    ul {
+      li {
+        margin-bottom: 24px;
+        .title {
+          @include fontStyle(18px, 25.2px, 700, #222);
+          margin-bottom: 8px;
+        }
+  
+        .cont-box {
+          background-color: $white;
+          border-radius: 8px;
+          padding: 16px 9px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          @include fontStyle(14px, 19.6px, 400, $basic)
+        }
+      }
+    }
+
+    .agree-box {
+      .check {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .btn-group {
+      position: absolute;
+      width: calc(100% - 40px);
+      bottom: 0;
+    }
+  }
 }

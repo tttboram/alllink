@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alllink</title>
     <link rel="stylesheet" href="../asset/css/main.css"/>
+    <script
+    src="../asset/js/lib/jquery-2.2.4.min.js"
+    type="text/javascript"
+  ></script>
   </head>
   <body>
     <header>
@@ -20,14 +24,14 @@
       </div>
     </header>
     <main class="fix">
-      <!-- 2차 추가 : 클래스 wide -->
+      <!-- 2차 추가 : 클래스 wide 추가 -->
       <div class="inner wide">
         <div class="content sector-main">
           <div class="banner">
             <a href="#" class="banner-img"> </a>
           </div>
           <!-- 2차 추가 : 제주 공항 면세점인 경우 클래스 jeju 추가 -->
-          <div class="receipt jeju">
+          <div class="receipt">
             <div class="receipt-cont">
               <div class="logo">
               </div>
@@ -131,7 +135,7 @@
                 </div>
                 <!-- 2차 추가 : 바코드 넘버 -->
                 <p class="barcode-num">111111111111111111111111111111</p>
-                <!-- //2차 추가 : 바코드 넘버 -->
+                <!-- 2차 추가 : //바코드 넘버 -->
                 <div class="company-info">
                   <p class="addr">
                     전북특별자치도 전주시 완산구 태조로 26-40 (풍남동3가) 오짱
@@ -170,11 +174,11 @@
                 </div>
               </div>
             </div>
+
             <!--  2차 추가 : 모영숲 올라오면 line display:none; -->
-            <div class="line"></div>
-            <!--  2차 추가 : 모영숲 올라오면 btn-cont display:none; -->
-            <!-- default : 설정한번도 안한 경우 -->
-            <div class="btn-cont">
+            <div class="line" style="display: none;"></div>
+             <!--  2차 추가 : 모영숲 올라오면 btn-cont display:none; -->
+            <div class="btn-cont" style="display: none;">
               <p class="btn-text">
                 모바일 전자 영수증을 안전하게 보관하고,<br>
                 탄소중립포인트를 적립하시려면<br>
@@ -196,9 +200,9 @@
             </div>
           </div>
         </div>
-        <!-- default -->
+
         <!-- 2차 추가 : 모영숲 올라온 페이지에서 display:none; 클래스 default : 모영숲 아래 있을 때 보여지는 녹색버튼영역-->
-        <div class="btn green">
+        <div class="btn green default" style="display: none;">
           <div class="bubble">
             <span>탄소중립실천포인트 적립하세요.</span>
           </div>
@@ -218,7 +222,7 @@
             연간 종이 영수증으로 사라지는 나무가<br>30만 그루입니다. 모바일 영수증 발급으로<br>나무를 지키고 숲을 만들어 가요.
           </div>
           <div class="wood-count">
-            <p>나의 모영 나무 <strong><span>0</span>그루</strong></p>
+            <p>나의 모영 나무 <strong><span>0</span>그루</strong> <div class="btn register"><a href="#">모영클럽 가입</a></div></p>
           </div>
           <div class="wood-state">
             <ul>
@@ -226,24 +230,28 @@
               <li class="seed on">
                 <img src="/asset/image/common/seed.png" alt="">
               </li>
-              <li class="sprout">
+              <li class="sprout on">
                 <img src="/asset/image/common/sprout.png" alt="">
               </li>
-              <li class="sampling">
+              <li class="sampling on">
                 <img src="/asset/image/common/sample.png" alt="">
               </li>
-              <li class="tree">
+              <li class="tree on">
                 <img src="/asset/image/common/tree.png" alt="">
               </li>
+              <div class="wood-countdown">
+                <p id="count"></p>
+              </div>
             </ul>
+           
             <p class="wood-total">
               함께 심은 모영나무 <strong><span>00000</span>그루</strong>
             </p>
           </div>
         </div>
         <!-- //2차 추가 : 모영숲 -->
-         <!-- 2차 추가 : 기본페이지에서 display:none; 클래스 wood : 모영숲 아래 있을 때 보여지는 녹색버튼영역-->
-        <div class="btn-cont setting wood" style="display: none;">
+        <!-- 2차 추가 : 기본페이지에서 display:none; 클래스 wood : 모영숲 아래 있을 때 보여지는 녹색버튼영역-->
+        <div class="btn-cont setting wood">
           <!-- 자동저장 설정한 경우 btn-cont 안에 auto-box 추가 -->
           <div class="auto-box">
             <div class="default">
@@ -252,7 +260,7 @@
                 <button><span class="icon bottom-arrow change"></span></button>
               </div>
             </div>
-            <div class="setting-area">
+            <div class="setting-area on">
               <div class="naver-btn">
                 <div class="btn naver">
                   <!-- 네이버 저장 설정 전 -->
@@ -285,6 +293,15 @@
           </div>
         </div>
         <!-- 2차 추가 : 기본페이지에서 display:none; 클래스 wood : 모영숲 아래 있을 때 보여지는 녹색버튼영역-->
+        <div class="btn green default">
+          <div class="bubble">
+            <span>탄소중립실천포인트 적립하세요.</span>
+          </div>
+          <a href="">
+            <span class="icon plus"></span>
+            <span><span class=point>100</span>원 적립예정</span>
+          </a>
+        </div>
       </div>
     </main>
     <!-- <div class="dimmed" style="display: block; background: rgba(0,0,0,.5);"></div> -->
@@ -334,10 +351,7 @@
     </div> -->
 
   </body>
-  <script
-  src="../asset/js/lib/jquery-2.2.4.min.js"
-  type="text/javascript"
-></script>
+
 <script src="../asset/js/lib/jquery-ui.js" type="text/javascript"></script>
 <script src="../asset/js/lib/slick.min.js" type="text/javascript"></script>
 <script src="../asset/js/common.js"></script>

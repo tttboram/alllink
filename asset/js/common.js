@@ -10,6 +10,7 @@ $(function () {
   settingChange();
   scrollEvent();
   backBtn();
+  countBox();
 
   //체크박스 체크 여부에 따라 버튼 컬러 변경
   var checkBtn = $('.checkbox');
@@ -166,3 +167,28 @@ function backBtn(){
     window.history.back();
   });
 }
+
+//카운드다운
+
+function countBox() {
+  const countDownDate = Date.now() + 24 * 60 * 60 * 1000; // 24시간 후
+
+  const updateCountdown = () => {
+    const distance = countDownDate - Date.now();
+    if (distance < 0) {
+      $('.wood-countdown p').text("EXPIRED");
+      return clearInterval(timer);
+    }
+
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    $('.wood-countdown p').text(`${hours}  :  ${minutes}  :  ${seconds}`);
+  };
+
+  const timer = setInterval(updateCountdown, 1000);
+  updateCountdown();
+}
+
+

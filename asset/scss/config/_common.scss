@@ -79,6 +79,15 @@ body {
   &.coin {
     @include backgroundImage(56px, 53px, "icon/coin.svg");
   }
+  &.gift {
+    @include backgroundImage(59px, 54.66px, "icon/gift.svg");
+  }
+  &.coupon {
+    @include backgroundImage(59px, 50px, "icon/coupon.svg");
+  }
+  &.event {
+    @include backgroundImage(59px, 50px, "icon/event.svg");
+  }
   &.kakao {
     @include backgroundImage(25px, 25px, "icon/kakao.svg");
   }
@@ -205,6 +214,10 @@ main {
   }
   .wood-count {
     width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     margin: 0 auto 8px;
     border-radius: 16px;
     background-color: $white;
@@ -222,6 +235,7 @@ main {
     background-color: $white;
     margin-bottom: 24px;
     ul {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -235,8 +249,31 @@ main {
           margin-left: 15px;
         }
         img {
+          opacity: .3;
           width: 100%;
         }
+
+        &.on {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+
+      .wood-countdown {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+        width: 112%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+         
+    p {
+      color:$white;
+      @include fontStyle(24px, 33.6px, 700, $white);
+    }
       }
     }
 

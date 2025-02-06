@@ -328,6 +328,30 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.icon.gift {
+  width: 59px;
+  height: 54.66px;
+  background-image: url("../image/icon/gift.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon.coupon {
+  width: 59px;
+  height: 50px;
+  background-image: url("../image/icon/coupon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon.event {
+  width: 59px;
+  height: 50px;
+  background-image: url("../image/icon/event.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .icon.kakao {
   width: 25px;
   height: 25px;
@@ -463,6 +487,10 @@ main.flex .inner .btn.bottom {
 }
 .reciept-wood .wood-count {
   width: calc(100% - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin: 0 auto 8px;
   border-radius: 16px;
   background-color: #fff;
@@ -484,6 +512,7 @@ main.flex .inner .btn.bottom {
   margin-bottom: 24px;
 }
 .reciept-wood .wood-state ul {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -499,7 +528,29 @@ main.flex .inner .btn.bottom {
   margin-left: 15px;
 }
 .reciept-wood .wood-state ul li img {
+  opacity: 0.3;
   width: 100%;
+}
+.reciept-wood .wood-state ul li.on img {
+  opacity: 1;
+}
+.reciept-wood .wood-state ul .wood-countdown {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  width: 112%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.reciept-wood .wood-state ul .wood-countdown p {
+  color: #fff;
+  font-size: 24px;
+  line-height: 33.6px;
+  letter-spacing: -0.48px;
+  font-weight: 700;
+  color: #fff;
 }
 .reciept-wood .wood-state .wood-total {
   margin-top: 12px;
@@ -690,6 +741,34 @@ input[type=checkbox]:checked + label:after {
   background-color: #888;
   border-radius: 40px;
 }
+.btn.register {
+  display: inline-block;
+  width: 119px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #888;
+  border-radius: 21px;
+}
+.btn.register a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 4px 16px;
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: -0.32px;
+  font-weight: 400;
+  color: #888;
+}
+.btn.green-line {
+  border: 1px solid #017F69;
+  color: #017F69;
+}
+.btn.primary {
+  background-color: #017F69;
+  color: #fff;
+}
 
 .button-sub {
   display: inline-block;
@@ -710,6 +789,20 @@ input[type=checkbox]:checked + label:after {
 .btn-group {
   bottom: 32px;
   width: 100%;
+}
+
+.btn-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.btn-flex a {
+  margin: 0;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button.change {
@@ -1884,4 +1977,56 @@ header .inner .menu-list li.on {
 }
 .sector-login .terms-box p a {
   text-decoration: underline;
+}
+.sector-benefit .main-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 24px;
+}
+.sector-benefit .main-title .icon.tooltip {
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.sector-benefit ul li {
+  margin-bottom: 24px;
+}
+.sector-benefit ul li .title {
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -0.36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+.sector-benefit ul li .cont-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+  font-weight: 400;
+  color: calc(100% - 40px);
+}
+.sector-benefit .agree-box .check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.sector-benefit .btn-group {
+  position: absolute;
+  width: calc(100% - 40px);
+  bottom: 0;
 }/*# sourceMappingURL=main.css.map */
